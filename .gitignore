@@ -1,3 +1,9 @@
 .idea/
 node_modules/
 *.scss
+webpack.config.js
+settings.js
+package-lock.json
+README.md
+package.json
+gulpfile.js
