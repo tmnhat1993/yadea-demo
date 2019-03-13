@@ -3385,7 +3385,7 @@ h1, h2, h3, h4, h5, p {
     font-weight: 300;
     width: 18px;
     height: 18px;
-    background-image: url("../../img/icons/product-arrow.png");
+    background-image: url("../img/icons/product-arrow.png");
     background-repeat: no-repeat;
     background-size: 17px 17px;
     background-position: center center;
@@ -3419,7 +3419,7 @@ h1, h2, h3, h4, h5, p {
     transform: translate(26px, 3px);
     opacity: 0.5; } }
   .product-slogan.txt-white:after {
-    background-image: url("../../img/icons/product-arrow-white.png"); }
+    background-image: url("../img/icons/product-arrow-white.png"); }
   @media only screen and (max-width: 1368px) {
     .product-slogan {
       font-size: 16px; } }
