@@ -3086,6 +3086,9 @@
   padding-right: 200px !important; }
 
 /* ============================
+ * Mixin helper
+ * ============================ */
+/* ============================
  * Color Helper
  * ============================ */
 .light-gray-bg {
@@ -3140,6 +3143,15 @@
 html, body {
   font-family: 'Encode Sans Semi Expanded', sans-serif;
   color: #000; }
+  @media only screen and (max-width: 1170px) {
+    html, body {
+      font-size: 15px; } }
+  @media screen and (max-width: 960px) {
+    html, body {
+      font-size: 14px; } }
+  @media only screen and (max-width: 768px) {
+    html, body {
+      font-size: 12px; } }
 
 a {
   color: inherit; }
@@ -5557,3 +5569,343 @@ body.fixed-header {
     #content-container .content-block p {
       font-size: 16px;
       line-height: 22px; } }
+
+.yadea-child-page.about-page .banner {
+  background: #fff url("../img/about-banner.jpg") no-repeat top; }
+
+.yadea-child-page .banner {
+  background-size: cover;
+  height: calc(100vh - 72px);
+  position: relative; }
+  @media only screen and (max-width: 768px) {
+    .yadea-child-page .banner {
+      min-height: 300px; } }
+  @media only screen and (max-width: 640px) {
+    .yadea-child-page .banner {
+      height: 300px; } }
+  .yadea-child-page .banner .text {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -khtml-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    @media only screen and (max-width: 768px) {
+      .yadea-child-page .banner .text {
+        padding: 0 15px;
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16); } }
+    .yadea-child-page .banner .text h2 {
+      font-size: 4.125rem;
+      line-height: 1.2em;
+      font-weight: bolder; }
+      @media only screen and (max-width: 640px) {
+        .yadea-child-page .banner .text h2 {
+          font-size: 2.5rem; } }
+    .yadea-child-page .banner .text p {
+      font-size: 1.25rem; }
+
+.yadea-child-page .content {
+  width: 1300px;
+  margin: 0 auto; }
+  @media screen and (max-width: 1300px) {
+    .yadea-child-page .content {
+      width: 1170px; } }
+  @media screen and (max-width: 1170px) {
+    .yadea-child-page .content {
+      max-width: 960px; } }
+  @media screen and (max-width: 960px) {
+    .yadea-child-page .content {
+      max-width: 720px; } }
+  @media only screen and (max-width: 768px) {
+    .yadea-child-page .content {
+      width: 100%;
+      padding: 0 15px; } }
+
+.yadea-child-page .line {
+  width: 14px;
+  height: 3px;
+  background: #eb6302;
+  border-radius: 3px;
+  margin: 0 auto; }
+
+.yadea-child-page .ui-flex {
+  display: -ms-flexbox;
+  display: flex; }
+
+.yadea-child-page .align-center {
+  -ms-flex-align: center;
+  align-items: center; }
+
+.yadea-child-page img {
+  max-width: 100%; }
+
+.about-page .intro-list {
+  padding: 60px 0;
+  border-bottom: 1px solid #ededed; }
+  @media only screen and (max-width: 640px) {
+    .about-page .intro-list {
+      padding: 30px 0; } }
+  .about-page .intro-list .intro-item {
+    width: 25%;
+    padding-left: 50px;
+    border-left: 1px solid rgba(255, 255, 255, 0.14); }
+    @media only screen and (max-width: 960px) {
+      .about-page .intro-list .intro-item {
+        padding-left: 20px; } }
+    @media only screen and (max-width: 640px) {
+      .about-page .intro-list .intro-item {
+        width: 50%; } }
+    .about-page .intro-list .intro-item:first-child {
+      border-left: none; }
+    .about-page .intro-list .intro-item .line {
+      margin: 0;
+      width: 34px; }
+    .about-page .intro-list .intro-item h3 {
+      display: inline;
+      font-size: 3.5rem;
+      font-weight: bolder;
+      background: -webkit-linear-gradient(bottom left, #e3000f, #ef7c00);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text; }
+      @media only screen and (max-width: 1170px) {
+        .about-page .intro-list .intro-item h3 {
+          font-size: 3.4rem; } }
+      @media only screen and (max-width: 960px) {
+        .about-page .intro-list .intro-item h3 {
+          font-size: 3rem; } }
+  @media only screen and (max-width: 640px) {
+    .about-page .intro-list .ui-flex {
+      flex-wrap: wrap; } }
+
+.about-page .description {
+  padding: 100px 0 40px;
+  text-align: center; }
+  @media only screen and (max-width: 768px) {
+    .about-page .description {
+      padding: 100px 15px 40px; } }
+  @media only screen and (max-width: 640px) {
+    .about-page .description {
+      padding: 40px 15px 10px; } }
+  .about-page .description .text h3 {
+    font-size: 2.625rem;
+    font-weight: bolder; }
+    @media only screen and (max-width: 640px) {
+      .about-page .description .text h3 {
+        font-size: 2.3rem; } }
+  .about-page .description .text p {
+    margin: 20px 0 40px; }
+    @media only screen and (max-width: 640px) {
+      .about-page .description .text p {
+        margin: 10px 0 20px; } }
+  .about-page .description .points-list {
+    margin: 40px 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    @media only screen and (max-width: 640px) {
+      .about-page .description .points-list {
+        flex-direction: column; } }
+    @media only screen and (max-width: 640px) {
+      .about-page .description .points-list {
+        margin: 20px 0 0; } }
+    .about-page .description .points-list .points-item {
+      margin-bottom: 20px;
+      width: calc((100% - 20px)/2); }
+      @media only screen and (max-width: 640px) {
+        .about-page .description .points-list .points-item {
+          width: 100%; } }
+      .about-page .description .points-list .points-item:nth-child(2n) {
+        margin-left: 20px; }
+        @media only screen and (max-width: 640px) {
+          .about-page .description .points-list .points-item:nth-child(2n) {
+            margin-left: 0; } }
+
+.about-page .product {
+  padding: 100px 0;
+  background: #fafafa; }
+  @media only screen and (max-width: 640px) {
+    .about-page .product {
+      padding: 40px 0; } }
+  .about-page .product .text {
+    text-align: center; }
+    .about-page .product .text h3 {
+      font-size: 2.625rem;
+      font-weight: bolder; }
+      @media only screen and (max-width: 640px) {
+        .about-page .product .text h3 {
+          font-size: 2.3rem; } }
+    .about-page .product .text p {
+      margin: 20px 0 30px; }
+      @media only screen and (max-width: 640px) {
+        .about-page .product .text p {
+          margin: 10px 0 20px; } }
+  .about-page .product .points-list {
+    margin: 40px 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    @media only screen and (max-width: 640px) {
+      .about-page .product .points-list {
+        flex-direction: column; } }
+    @media only screen and (max-width: 640px) {
+      .about-page .product .points-list {
+        margin: 20px 0 0; } }
+    .about-page .product .points-list .points-item {
+      width: calc((100% - 40px)/3);
+      margin-right: 20px;
+      margin-bottom: 20px; }
+      .about-page .product .points-list .points-item:nth-child(3n+0) {
+        margin-right: 0; }
+      .about-page .product .points-list .points-item:nth-child(1) .text p, .about-page .product .points-list .points-item:nth-child(2) .text p, .about-page .product .points-list .points-item:nth-child(3) .text p {
+        height: 380px; }
+      @media only screen and (max-width: 960px) {
+        .about-page .product .points-list .points-item {
+          width: calc((100% - 20px)/2); }
+          .about-page .product .points-list .points-item:nth-child(3n+0) {
+            margin-right: 20px; }
+          .about-page .product .points-list .points-item:nth-child(2n) {
+            margin-right: 0; }
+          .about-page .product .points-list .points-item:nth-child(1) .text p, .about-page .product .points-list .points-item:nth-child(2) .text p, .about-page .product .points-list .points-item:nth-child(5) .text p, .about-page .product .points-list .points-item:nth-child(6) .text p {
+            height: 155px; }
+          .about-page .product .points-list .points-item:nth-child(3) .text p, .about-page .product .points-list .points-item:nth-child(4) .text p {
+            height: 265px; } }
+      @media only screen and (max-width: 640px) {
+        .about-page .product .points-list .points-item {
+          width: 100%; }
+          .about-page .product .points-list .points-item .text p {
+            height: auto !important; } }
+    .about-page .product .points-list .img-box {
+      text-align: center;
+      background-color: #fff; }
+    .about-page .product .points-list .text {
+      background: #fff;
+      padding: 60px 60px 40px; }
+      @media screen and (max-width: 1300px) {
+        .about-page .product .points-list .text {
+          padding: 60px 30px 40px; } }
+      @media screen and (max-width: 1170px) {
+        .about-page .product .points-list .text {
+          padding: 60px 15px 40px; } }
+      @media only screen and (max-width: 640px) {
+        .about-page .product .points-list .text {
+          padding: 30px 15px 20px; } }
+      .about-page .product .points-list .text h4 {
+        font-size: 2rem;
+        font-weight: bolder;
+        height: 114px; }
+        @media only screen and (max-width: 960px) {
+          .about-page .product .points-list .text h4 {
+            height: auto; } }
+        @media only screen and (max-width: 640px) {
+          .about-page .product .points-list .text h4 {
+            font-size: 1.5rem; } }
+      .about-page .product .points-list .text p {
+        line-height: 2em;
+        height: 250px; }
+
+.about-page .culture {
+  padding: 100px 0; }
+  @media only screen and (max-width: 768px) {
+    .about-page .culture {
+      padding: 100px 15px; } }
+  @media only screen and (max-width: 640px) {
+    .about-page .culture {
+      padding: 40px 15px; } }
+  .about-page .culture .text {
+    text-align: center; }
+    .about-page .culture .text h3 {
+      font-size: 2.625rem;
+      font-weight: bolder; }
+      @media only screen and (max-width: 640px) {
+        .about-page .culture .text h3 {
+          font-size: 2.3rem; } }
+    .about-page .culture .text p {
+      margin: 20px 0 40px; }
+      @media only screen and (max-width: 640px) {
+        .about-page .culture .text p {
+          margin: 10px 0 20px; } }
+  .about-page .culture .points-list {
+    margin-top: 40px;
+    align-items: flex-start; }
+    @media only screen and (max-width: 960px) {
+      .about-page .culture .points-list {
+        flex-direction: column; } }
+    .about-page .culture .points-list .text {
+      width: 660px;
+      padding-right: 160px;
+      text-align: left; }
+      @media only screen and (max-width: 960px) {
+        .about-page .culture .points-list .text {
+          order: 2;
+          padding-right: 0;
+          width: 100%; } }
+      .about-page .culture .points-list .text h5 {
+        font-size: 1.5rem;
+        font-weight: bolder; }
+      .about-page .culture .points-list .text p {
+        margin: 10px 0 50px; }
+        @media only screen and (max-width: 640px) {
+          .about-page .culture .points-list .text p {
+            margin-bottom: 20px; } }
+    .about-page .culture .points-list .img-box {
+      width: 640px;
+      margin: auto; }
+      @media only screen and (max-width: 960px) {
+        .about-page .culture .points-list .img-box {
+          order: 1;
+          margin-bottom: 20px;
+          max-width: 350px;
+          width: 100%; } }
+
+.about-page .gongyi {
+  padding: 0 0 100px; }
+  @media only screen and (max-width: 768px) {
+    .about-page .gongyi {
+      padding: 0 15px 100px; } }
+  @media only screen and (max-width: 640px) {
+    .about-page .gongyi {
+      padding-bottom: 40px; } }
+  @media only screen and (max-width: 640px) {
+    .about-page .gongyi .ui-flex {
+      flex-direction: column; } }
+  .about-page .gongyi .text {
+    text-align: center; }
+    .about-page .gongyi .text h3 {
+      font-size: 2.625rem;
+      font-weight: bolder; }
+  .about-page .gongyi .points-list {
+    margin-top: 40px; }
+    .about-page .gongyi .points-list .points-item {
+      width: calc((100% - 20px)/2);
+      margin-right: 20px; }
+      @media only screen and (max-width: 640px) {
+        .about-page .gongyi .points-list .points-item {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 20px; } }
+      .about-page .gongyi .points-list .points-item:last-child {
+        margin-right: 0; }
+    .about-page .gongyi .points-list .desc {
+      border: 1px solid #ededed;
+      border-top: none;
+      padding: 30px; }
+      @media only screen and (max-width: 640px) {
+        .about-page .gongyi .points-list .desc {
+          padding: 15px; } }
+      .about-page .gongyi .points-list .desc p {
+        height: 4.5em;
+        margin-bottom: 0; }
+        @media screen and (max-width: 960px) {
+          .about-page .gongyi .points-list .desc p {
+            height: 5.5rem; } }
+        @media only screen and (max-width: 768px) {
+          .about-page .gongyi .points-list .desc p {
+            height: 8.5rem; } }
+        @media only screen and (max-width: 640px) {
+          .about-page .gongyi .points-list .desc p {
+            height: auto; } }

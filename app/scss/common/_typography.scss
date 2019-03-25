@@ -1,4 +1,4 @@
-@font-face {
+  @font-face {
   font-family: 'DIN Pro', sans-serif;
   src: url('../../fonts/UVF DINPro.otf');
   font-weight: 500;
@@ -19,6 +19,16 @@
 html, body{
   font-family: 'Encode Sans Semi Expanded', sans-serif;
   color: $black;
+  @media only screen and (max-width : 1170px) {
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 960px) {
+    font-size: 14px;
+  }
+  @media #{$information-tablet} {
+    font-size: 12px;
+  }
 }
 
 a{
