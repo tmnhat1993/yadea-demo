@@ -16,6 +16,27 @@ $sides: (top, bottom, left, right); // Leave this variable alone
   }
 }
 
+
+/* ============================
+ * Mixin helper
+ * ============================ */
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property} : #{$value};
+  -moz-#{$property}   : #{$value};
+  -ms-#{$property}    : #{$value};
+  -o-#{$property}     : #{$value};
+  #{$property}        : #{$value};
+}
+
+@mixin flex() {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+
 /* ============================
  * Color Helper
  * ============================ */
