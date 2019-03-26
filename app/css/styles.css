@@ -5999,3 +5999,50 @@ body.fixed-header {
       .course-page .course-list .month .content .text p {
         margin-top: 20px;
         color: #4c4c4c; }
+
+.supplier-page .banner {
+  background: #fff url("../img/supplier-banner.jpg") no-repeat top; }
+
+.supplier-page .intro {
+  font-size: 1.25rem;
+  text-align: center;
+  width: 630px;
+  margin: 60px auto; }
+  @media only screen and (max-width: 960px) {
+    .supplier-page .intro {
+      margin: 40px auto; } }
+  @media only screen and (max-width: 640px) {
+    .supplier-page .intro {
+      width: 100%; } }
+
+.supplier-page .ui-flex {
+  margin: 0 auto 100px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  @media only screen and (max-width: 960px) {
+    .supplier-page .ui-flex {
+      margin-bottom: 60px; } }
+  @media only screen and (max-width: 640px) {
+    .supplier-page .ui-flex {
+      margin-bottom: 40px; } }
+  .supplier-page .ui-flex .item {
+    width: calc((100% - 60px)/4);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(120, 120, 120, 0.1); }
+    .supplier-page .ui-flex .item:nth-child(4n+0) {
+      margin-right: 0; }
+    @media only screen and (max-width: 960px) {
+      .supplier-page .ui-flex .item {
+        width: calc((100% - 40px)/3); }
+        .supplier-page .ui-flex .item:nth-child(4n+0) {
+          margin-right: 20px; }
+        .supplier-page .ui-flex .item:nth-child(3n+0) {
+          margin-right: 0; } }
+    @media only screen and (max-width: 640px) {
+      .supplier-page .ui-flex .item {
+        width: calc((100% - 20px)/2); }
+        .supplier-page .ui-flex .item:nth-child(3n+0) {
+          margin-right: 20px; }
+        .supplier-page .ui-flex .item:nth-child(2n) {
+          margin-right: 0; } }
