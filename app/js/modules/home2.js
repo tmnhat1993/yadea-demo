@@ -3,6 +3,7 @@ import * as _ from 'lodash';
 import Slider from './slider';
 import Main from './main';
 import Products from './products';
+import Supports from './support';
 
 export default class Home {
     /* ===================================
@@ -18,7 +19,8 @@ export default class Home {
         // Products Page
         this.products = new Products();
 
-
+        // Supports Page
+        this.supports = new Supports();
         this.bindEvents();
     }
 

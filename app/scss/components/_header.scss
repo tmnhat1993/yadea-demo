@@ -22,7 +22,7 @@
     }
 
     &__logo{
-
+      img{height: 40px;}
     }
 
     &__menu{
@@ -88,7 +88,7 @@
       width: 100%;
       background-color: $white;
       padding: 30px 10px 20px;
-      position: relative;
+      position: absolute;
       box-shadow: 0 0 24px rgba(0,0,0,0.2);
       overflow: hidden;
 
@@ -118,6 +118,48 @@
       opacity: 1;
       transform: translateY(0px) scaleY(1);
       visibility: visible;
+    }
+
+    &#about-us-sub-menu{
+      padding: 0 15px;
+
+      .sub-menu__wrapper{
+        padding: 0;
+        overflow: hidden;
+
+        &__item{
+          margin: 0;
+          padding-top: 25px;
+          padding-bottom: 40px;
+          background-color: transparent;
+          transition: all ease-out 150ms 20ms;
+          border-right: 0.5px solid #E4E4E4;
+          position: relative;
+
+          &__detail{
+            padding: 0 12px;
+            .sub-title{
+              margin-top: 16px;
+              margin-bottom: 5px;
+            }
+
+            .fa{
+              position: absolute;
+              bottom: 20px;
+              left: 25px;
+              color: $main-color;
+              transform: translateX(0);
+            }
+          }
+
+          &:hover{
+            background-color: #EFEFEF;
+              .fa{
+                animation: aboutus-arrow 700ms infinite ease-in-out;
+              }
+          }
+        }
+      }
     }
   }
 
@@ -295,6 +337,12 @@
                   padding: 0 10px;
                 }
               }
+
+              li.about-item{
+                list-style: none;
+                width: 100%;
+                display: block;
+              }
             }
           }
         }
@@ -394,4 +442,11 @@ body{
     &.red{ background-color: #e02e2a; }
     &.yellow{ background-color: #fff307; }
   }
+}
+
+
+@keyframes aboutus-arrow {
+  0%{transform: translateX(0px);}
+  50%{transform: translateX(2px);}
+  100%{transform: translateX(0px);}
 }

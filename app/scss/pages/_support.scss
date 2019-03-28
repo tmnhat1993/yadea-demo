@@ -11,6 +11,7 @@
       display: -webkit-flex;
       display: flex;
       flex-direction: column;
+      cursor: pointer;
 
       &__image{
         height: 100px;
@@ -28,7 +29,7 @@
           font-weight: 700;// bold
           margin: 0;
           margin-bottom: 5px;
-          font-size: 24px;
+          font-size: 22px;
         }
 
         .sm-cta{
@@ -47,7 +48,7 @@
   .contact-info{
     &__title{
       font-weight: 900; // black
-      font-size: 48px;
+      font-size: 36px;
     }
 
     &__details{
@@ -88,17 +89,22 @@
       &__item{
 
         &__image{
-          height: 90px;
+          height: 80px;
           margin-bottom: 15px;
+
+          img{
+            max-height: 80px;
+          }
         }
 
         &__detail{
           .page-desc{
             margin-bottom: 5px;
-            font-size: 22px;
+            font-size: 20px;
           }
 
           .sm-cta{
+            font-size: 17px;
             &:after{
               margin-left: 6px;
             }
@@ -109,7 +115,7 @@
 
     .contact-info{
       &__title{
-        font-size: 44px;
+        font-size: 34px;
       }
 
       &__details{
@@ -118,13 +124,13 @@
         &__item{
 
           &__icon{
-            width: 46px;
-            height: 46px;
-            margin-right: 22px;
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
           }
 
           p{
-            font-size: 26px;
+            font-size: 22px;
           }
         }
       }
@@ -140,11 +146,11 @@
       &__item{
 
         &__image{
-          height: 80px;
+          height: 70px;
           margin-bottom: 25px;
 
           img{
-            max-height: 80px;
+            max-height: 70px;
           }
         }
 
@@ -152,11 +158,11 @@
 
           .page-desc{
             margin-bottom: 5px;
-            font-size: 22px;
+            font-size: 18px;
           }
 
           .sm-cta{
-            font-weight: 400; // regular
+            font-size: 14px;
 
             &:after{
               margin-left: 6px;
@@ -168,7 +174,7 @@
 
     .contact-info{
       &__title{
-        font-size: 38px;
+        font-size: 32px;
       }
 
       &__details{
@@ -177,13 +183,13 @@
         &__item{
 
           &__icon{
-            width: 40px;
-            height: 40px;
-            margin-right: 20px;
+            width: 36px;
+            height: 36px;
+            margin-right: 18px;
           }
 
           p{
-            font-size: 24px;
+            font-size: 20px;
           }
         }
       }
@@ -235,18 +241,18 @@
           margin-bottom: 5px;
 
           &__icon{
-            width: 32px;
-            height: 32px;
-            margin-right: 20px;
+            width: 30px;
+            height: 30px;
+            margin-right: 18px;
 
             img{
-              max-height: 32px;
-              max-width: 32px;
+              max-height: 30px;
+              max-width: 30px;
             }
           }
 
           p{
-            font-size: 20px;
+            font-size: 18px;
           }
         }
       }
@@ -350,6 +356,7 @@
           }
 
           .sm-cta{
+            font-size: 13px;
             &:after{
               margin-left: 5px;
             }
@@ -360,7 +367,7 @@
 
     .contact-info{
       &__title{
-        font-size: 26px;
+        font-size: 24px;
       }
 
       &__details{
@@ -424,7 +431,7 @@
 
     .contact-info{
       &__title{
-        font-size: 24px;
+        font-size: 22px;
       }
 
       &__details{
