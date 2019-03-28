@@ -8,6 +8,9 @@ export default class Main {
         this.$subMenuTrigger = $('#sub-menu-trigger');
         this.$subMenu = $('#page-sub-menu');
 
+        this.$aboutusMenuTrigger = $('#about-us-sub-menu-trigger');
+        this.$aboutusSubMenu = $('#about-us-sub-menu');
+
         this.$imageHolder = $('.image-holder');
         this.$imageHolderTarget = null;
         this.imageHolderInterval = null;
@@ -25,6 +28,7 @@ export default class Main {
             showMbMenu: false,
             allowClickMbMenu: true,
             showSmallMenu: false,
+            showAboutSubMenu: false,
         }
 
         this.bindEvents();
@@ -40,7 +44,12 @@ export default class Main {
             e.preventDefault();
 
             if(!this.appStatus.showSubMenu){
+                this.ToggleAboutSubMenu(false);
                 this.ToggleSubMenu(true);
+            }
+
+            if(this.appStatus.showAboutSubMenu){
+                this.ToggleAboutSubMenu(false);
             }
         });
 
@@ -50,6 +59,23 @@ export default class Main {
             }
         });
 
+        /* ===== Aboutus Sub Menu Effect Display ===== */
+        this.$aboutusMenuTrigger.on('mouseenter', (e) => {
+            e.preventDefault();
+
+            if(!this.appStatus.showAboutSubMenu){
+                this.ToggleAboutSubMenu(true);
+            }
+            if(this.appStatus.showSubMenu){
+                this.ToggleSubMenu(false);
+            }
+        });
+
+        this.$aboutusSubMenu.on('mouseleave', (e) => {
+            if(this.appStatus.showAboutSubMenu){
+                this.ToggleAboutSubMenu(false);
+            }
+        });
 
         /* ===== Mobile Menu Effect ===== */
         this.CloseMbSubMenu();
@@ -80,10 +106,10 @@ export default class Main {
                     this.appStatus.allowClickMbMenu = false;
                     setTimeout(() => this.appStatus.allowClickMbMenu = true, 200);
 
-                    if(this.$subNavTrigger.hasClass('active')){
-                        this.$subNavTrigger.removeClass('active');
+                    if($(e.target).hasClass('active')){
+                        $(e.target).removeClass('active');
                     } else {
-                        this.$subNavTrigger.addClass('active');
+                        $(e.target).addClass('active');
                     }
 
                     let $toggleTarget = $(e.target).siblings('.nav-item__sub-menu');
@@ -125,6 +151,15 @@ export default class Main {
             this.$subMenu.addClass('active');
         } else {
             this.$subMenu.removeClass('active');
+        }
+    }
+
+    ToggleAboutSubMenu(show){
+        this.appStatus.showAboutSubMenu = show;
+        if(show){
+            this.$aboutusSubMenu.addClass('active');
+        } else {
+            this.$aboutusSubMenu.removeClass('active');
         }
     }
 

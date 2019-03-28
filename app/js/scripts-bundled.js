@@ -81,7 +81,7 @@
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.11';
+  var VERSION = '4.17.5';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
@@ -345,7 +345,7 @@
   var reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange  + rsComboRange + rsVarRange + ']');
 
   /** Used to detect strings that need a more robust regexp to match words. */
-  var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+  var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
 
   /** Used to assign default `context` object properties. */
   var contextProps = [
@@ -505,14 +505,6 @@
   /** Used to access faster Node.js helpers. */
   var nodeUtil = (function() {
     try {
-      // Use `util.types` for Node.js 10+.
-      var types = freeModule && freeModule.require && freeModule.require('util').types;
-
-      if (types) {
-        return types;
-      }
-
-      // Legacy `process.binding('util')` for Node.js < 10.
       return freeProcess && freeProcess.binding && freeProcess.binding('util');
     } catch (e) {}
   }());
@@ -1291,6 +1283,20 @@
       }
     }
     return result;
+  }
+
+  /**
+   * Gets the value at `key`, unless `key` is "__proto__".
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @param {string} key The key of the property to get.
+   * @returns {*} Returns the property value.
+   */
+  function safeGet(object, key) {
+    return key == '__proto__'
+      ? undefined
+      : object[key];
   }
 
   /**
@@ -3750,7 +3756,7 @@
           if (isArguments(objValue)) {
             newValue = toPlainObject(objValue);
           }
-          else if (!isObject(objValue) || isFunction(objValue)) {
+          else if (!isObject(objValue) || (srcIndex && isFunction(objValue))) {
             newValue = initCloneObject(srcValue);
           }
         }
@@ -6671,22 +6677,6 @@
         array[length] = isIndex(index, arrLength) ? oldArray[index] : undefined;
       }
       return array;
-    }
-
-    /**
-     * Gets the value at `key`, unless `key` is "__proto__".
-     *
-     * @private
-     * @param {Object} object The object to query.
-     * @param {string} key The key of the property to get.
-     * @returns {*} Returns the property value.
-     */
-    function safeGet(object, key) {
-      if (key == '__proto__') {
-        return;
-      }
-
-      return object[key];
     }
 
     /**
@@ -17213,6 +17203,8 @@ var _main = _interopRequireDefault(__webpack_require__(19));
 
 var _products = _interopRequireDefault(__webpack_require__(20));
 
+var _support = _interopRequireDefault(__webpack_require__(21));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -17237,7 +17229,9 @@ function () {
 
     this.main = new _main.default(); // Products Page
 
-    this.products = new _products.default();
+    this.products = new _products.default(); // Supports Page
+
+    this.supports = new _support.default();
     this.bindEvents();
   }
   /* ===================================
@@ -18954,6 +18948,8 @@ function () {
     // Elements Variable
     this.$subMenuTrigger = $('#sub-menu-trigger');
     this.$subMenu = $('#page-sub-menu');
+    this.$aboutusMenuTrigger = $('#about-us-sub-menu-trigger');
+    this.$aboutusSubMenu = $('#about-us-sub-menu');
     this.$imageHolder = $('.image-holder');
     this.$imageHolderTarget = null;
     this.imageHolderInterval = null;
@@ -18968,7 +18964,8 @@ function () {
       imageHoverState: false,
       showMbMenu: false,
       allowClickMbMenu: true,
-      showSmallMenu: false
+      showSmallMenu: false,
+      showAboutSubMenu: false
     };
     this.bindEvents();
   }
@@ -18987,12 +18984,36 @@ function () {
         e.preventDefault();
 
         if (!_this.appStatus.showSubMenu) {
+          _this.ToggleAboutSubMenu(false);
+
           _this.ToggleSubMenu(true);
+        }
+
+        if (_this.appStatus.showAboutSubMenu) {
+          _this.ToggleAboutSubMenu(false);
         }
       });
       this.$subMenu.on('mouseleave', function (e) {
         if (_this.appStatus.showSubMenu) {
           _this.ToggleSubMenu(false);
+        }
+      });
+      /* ===== Aboutus Sub Menu Effect Display ===== */
+
+      this.$aboutusMenuTrigger.on('mouseenter', function (e) {
+        e.preventDefault();
+
+        if (!_this.appStatus.showAboutSubMenu) {
+          _this.ToggleAboutSubMenu(true);
+        }
+
+        if (_this.appStatus.showSubMenu) {
+          _this.ToggleSubMenu(false);
+        }
+      });
+      this.$aboutusSubMenu.on('mouseleave', function (e) {
+        if (_this.appStatus.showAboutSubMenu) {
+          _this.ToggleAboutSubMenu(false);
         }
       });
       /* ===== Mobile Menu Effect ===== */
@@ -19027,10 +19048,10 @@ function () {
               return _this.appStatus.allowClickMbMenu = true;
             }, 200);
 
-            if (_this.$subNavTrigger.hasClass('active')) {
-              _this.$subNavTrigger.removeClass('active');
+            if ($(e.target).hasClass('active')) {
+              $(e.target).removeClass('active');
             } else {
-              _this.$subNavTrigger.addClass('active');
+              $(e.target).addClass('active');
             }
 
             var $toggleTarget = $(e.target).siblings('.nav-item__sub-menu');
@@ -19076,6 +19097,17 @@ function () {
         this.$subMenu.addClass('active');
       } else {
         this.$subMenu.removeClass('active');
+      }
+    }
+  }, {
+    key: "ToggleAboutSubMenu",
+    value: function ToggleAboutSubMenu(show) {
+      this.appStatus.showAboutSubMenu = show;
+
+      if (show) {
+        this.$aboutusSubMenu.addClass('active');
+      } else {
+        this.$aboutusSubMenu.removeClass('active');
       }
     }
   }, {
@@ -19355,6 +19387,79 @@ function () {
 }();
 
 exports.default = Products;
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Supports =
+/*#__PURE__*/
+function () {
+  /* ===================================
+   *  CONSTRUCTOR
+   * =================================== */
+  function Supports() {
+    _classCallCheck(this, Supports);
+
+    // Elements Variable
+    this.$modalElem = $('.modal');
+    this.$modalOverlay = this.$modalElem.find('.modal-overlay');
+    this.$closeModal = $('.close-modal');
+    this.$openModal = $('#trigger-as-shop');
+    this.bindEvents();
+  }
+  /* ===================================
+   *  EVENTS
+   * =================================== */
+
+
+  _createClass(Supports, [{
+    key: "bindEvents",
+    value: function bindEvents() {
+      var _this = this;
+
+      this.$closeModal.on('click', function () {
+        _this.CloseModal();
+      });
+      this.$openModal.on('click', function () {
+        _this.OpenModal();
+      });
+      console.log('Bind Event');
+    }
+    /* ===================================
+     *  METHODS
+     * =================================== */
+
+  }, {
+    key: "CloseModal",
+    value: function CloseModal() {
+      this.$modalElem.removeClass('active');
+    }
+  }, {
+    key: "OpenModal",
+    value: function OpenModal() {
+      this.$modalElem.addClass('active');
+    }
+  }]);
+
+  return Supports;
+}();
+
+exports.default = Supports;
 
 /***/ })
 /******/ ]);

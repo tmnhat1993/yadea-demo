@@ -183,7 +183,12 @@
       margin-top: 80px;
 
       &__title{
+        max-width: 33.3%;
         margin: 0 0 100px;
+
+        img{
+          width: 100%;
+        }
       }
 
       &__products{
@@ -202,15 +207,15 @@
             padding: 25px 0px 0 40px;
 
             .product-name{
-              font-size: 72px;
-              line-height: 86px;
+              font-size: 57px;
+              line-height: 71px;
               font-weight: 700; // bold
               margin-bottom: 20px;
             }
 
             .price{
               color: $main-color;
-              font-size: 36px;
+              font-size: 32px;
               font-weight: 400; // regular
               margin-bottom: 15px;
             }
@@ -238,8 +243,94 @@
   }
 
   /* Responsive */
-  @media #{$information-laptop} {}
-  @media #{$information-sm-laptop} {}
+  @media #{$information-laptop} {
+    padding: 20px 0 90px;
+
+    .series{  
+      &__block{
+        margin-top: 75px;
+  
+        &__title{
+          margin: 0 0 90px;
+        }
+  
+        &__products{
+          &__item{
+            margin-bottom: 90px;
+  
+            &__detail{
+              padding: 25px 0px 0 40px;
+  
+              .product-name{
+                font-size: 54px;
+                line-height: 70px;
+                margin-bottom: 18px;
+              }
+  
+              .price{
+                font-size: 30px;
+                margin-bottom: 15px;
+              }
+  
+              .desc{
+                font-size: 22px;
+                margin-bottom: 30px;
+                line-height: 30px;
+              }
+  
+              .product-cta{
+                margin-right: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media #{$information-sm-laptop} {
+    padding: 20px 0 85px;
+
+    .series{  
+      &__block{
+        margin-top: 70px;
+  
+        &__title{
+          margin: 0 0 85px;
+        }
+  
+        &__products{
+          &__item{
+            margin-bottom: 85px;
+  
+            &__detail{
+              padding: 25px 0px 0 40px;
+  
+              .product-name{
+                font-size: 50px;
+                line-height: 66px;
+                margin-bottom: 18px;
+              }
+  
+              .price{
+                font-size: 28px;
+                margin-bottom: 12px;
+              }
+  
+              .desc{
+                font-size: 20px;
+                margin-bottom: 30px;
+                line-height: 30px;
+              }
+  
+              .product-cta{
+                margin-right: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   @media #{$information-lg-tablet} {}
   @media #{$information-hz-phone} {
     padding: 20px 0 0;

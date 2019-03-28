@@ -13,6 +13,7 @@
 @import 'components/footer';
 @import 'components/common';
 @import 'components/sliders';
+@import 'components/modal';
 
 // pages
 @import 'pages/home';
@@ -20,3 +21,6 @@
 @import 'pages/support';
 @import 'pages/blank';
 @import 'pages/shop';
+@import "pages/about";
+@import "pages/course";
+@import "pages/supplier";

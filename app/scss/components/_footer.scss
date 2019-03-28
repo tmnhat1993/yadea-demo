@@ -12,6 +12,8 @@
       text-transform: uppercase;
       margin: 0;
       padding-bottom: 20px;
+      @media #{$information-laptop} {font-size: 17px;}
+      @media #{$information-sm-laptop} {font-size: 16px;}
       @media #{$information-hz-phone} { padding-bottom: 18px; }
       @media #{$information-tablet} { padding-bottom: 15px; }
       @media #{$information-phone} { padding-bottom: 13px; }
@@ -33,6 +35,9 @@
         color: $text-color;
         font-weight: 400; //regular
 
+        @media #{$information-laptop} {font-size: 15px;}
+        @media #{$information-sm-laptop} {font-size: 14px;}
+
         a,span {
           opacity: 0.6;
         }
@@ -53,6 +58,26 @@
         transition: all ease-out 150ms 20ms;
         cursor: pointer;
 
+        a{
+          display: inline-block;
+          width: 49px;
+          height: 49px;
+
+          @media #{$information-laptop} { 
+            width: 47px;
+            height: 47px;
+          }
+
+          @media #{$information-sm-laptop} {
+            width: 45px;
+            height: 45px;
+          }
+
+          img{
+            width: 100%;
+          }
+        }
+
         &:hover{
           opacity: 1;
         }
@@ -70,6 +95,14 @@
       opacity: 0.6;
       font-size: 16px;
       font-weight: 400; // regular
+
+      @media #{$information-laptop} { 
+        font-size: 15px;
+      }
+
+      @media #{$information-sm-laptop} {
+        font-size: 14px;
+      }
     }
   }
 }
