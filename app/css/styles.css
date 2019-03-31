@@ -5894,7 +5894,7 @@ body.fixed-header {
   max-width: 100%; }
 
 .about-page .banner {
-  background: #fff url("../img/about-banner.jpg") no-repeat top; }
+  background: #fff url("../img/about-banner.jpg") no-repeat bottom; }
 
 .about-page .intro-list {
   padding: 60px 0;
@@ -5912,6 +5912,9 @@ body.fixed-header {
     @media only screen and (max-width: 640px) {
       .about-page .intro-list .intro-item {
         width: 50%; } }
+    @media screen and (max-width: 320px) {
+      .about-page .intro-list .intro-item {
+        padding-left: 0; } }
     .about-page .intro-list .intro-item:first-child {
       border-left: none; }
     .about-page .intro-list .intro-item .line {

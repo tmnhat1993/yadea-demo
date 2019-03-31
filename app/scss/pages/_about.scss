@@ -78,7 +78,7 @@
 
 .about-page {
   .banner {
-    background: #fff url('../img/about-banner.jpg') no-repeat top;
+    background: #fff url('../img/about-banner.jpg') no-repeat bottom;
   }
   .intro-list {
     padding: 60px 0;
@@ -95,6 +95,9 @@
       }
       @media #{$information-sm-tablet} {
         width: 50%;
+      }
+      @media screen and (max-width: 320px) {
+        padding-left: 0;
       }
       &:first-child {
         border-left: none;
