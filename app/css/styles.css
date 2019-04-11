@@ -3164,7 +3164,7 @@ h1, h2, h3, h4, h5, p {
   margin-top: 0; }
 
 .grad-txt {
-  background: -webkit-linear-gradient(90deg, #ed2024, #f5811f);
+  background: -webkit-linear-gradient(0deg, #F91201, #F86704, #F26D20);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
@@ -5903,52 +5903,51 @@ body.fixed-header {
   max-width: 100%; }
 
 .about-page .banner {
-  background: #fff url("../img/about-banner.jpg") no-repeat bottom; }
-
-.about-page .intro-list {
-  padding: 60px 0;
-  border-bottom: 1px solid #ededed; }
-  @media only screen and (max-width: 640px) {
-    .about-page .intro-list {
-      padding: 30px 0; } }
-  .about-page .intro-list .intro-item {
-    width: 25%;
-    padding-left: 50px;
-    border-left: 1px solid rgba(255, 255, 255, 0.14); }
-    @media only screen and (max-width: 960px) {
-      .about-page .intro-list .intro-item {
-        padding-left: 20px; } }
-    @media only screen and (max-width: 640px) {
-      .about-page .intro-list .intro-item {
-        width: 50%; } }
-    @media screen and (max-width: 320px) {
-      .about-page .intro-list .intro-item {
-        padding-left: 0; } }
-    .about-page .intro-list .intro-item:first-child {
-      border-left: none; }
-    .about-page .intro-list .intro-item .line {
-      margin: 0;
-      width: 34px; }
-    .about-page .intro-list .intro-item h3 {
-      display: inline;
-      font-size: 3.5rem;
-      font-weight: bolder;
-      background: -webkit-linear-gradient(bottom left, #e3000f, #ef7c00);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text; }
-      @media only screen and (max-width: 1170px) {
-        .about-page .intro-list .intro-item h3 {
-          font-size: 3.4rem; } }
-      @media only screen and (max-width: 960px) {
-        .about-page .intro-list .intro-item h3 {
-          font-size: 3rem; } }
-  @media only screen and (max-width: 640px) {
-    .about-page .intro-list .ui-flex {
-      flex-wrap: wrap; } }
+  background-position: center center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  background-color: #45494C;
+  height: calc(90vh - 72px); }
+  .about-page .banner .main-content {
+    color: #FFF;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    .about-page .banner .main-content .content-head {
+      padding: 0 0 30px; }
+      .about-page .banner .main-content .content-head .title {
+        margin: 0 0 15px; }
+  .about-page .banner .intro-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap; }
+    .about-page .banner .intro-list .intro-item {
+      width: 25%;
+      background-color: white;
+      color: #333;
+      text-align: left;
+      padding: 30px 40px 50px;
+      border-right: 2px solid #45494C; }
+      .about-page .banner .intro-list .intro-item .icon {
+        margin: 25px 0;
+        width: 22%; }
+        .about-page .banner .intro-list .intro-item .icon img {
+          width: 100%; }
+      .about-page .banner .intro-list .intro-item .grad-txt {
+        font-size: 50px;
+        font-weight: 700;
+        margin: 17px 0 5px; }
+      .about-page .banner .intro-list .intro-item .line {
+        margin: 0; }
+      .about-page .banner .intro-list .intro-item p {
+        font-weight: 500;
+        font-size: 16px; }
 
 .about-page .description {
-  padding: 100px 0 40px;
+  padding: 50px 0 15px;
   text-align: center; }
   @media only screen and (max-width: 768px) {
     .about-page .description {
@@ -5956,17 +5955,6 @@ body.fixed-header {
   @media only screen and (max-width: 640px) {
     .about-page .description {
       padding: 40px 15px 10px; } }
-  .about-page .description .text h3 {
-    font-size: 2.625rem;
-    font-weight: bolder; }
-    @media only screen and (max-width: 640px) {
-      .about-page .description .text h3 {
-        font-size: 2.3rem; } }
-  .about-page .description .text p {
-    margin: 20px 0 40px; }
-    @media only screen and (max-width: 640px) {
-      .about-page .description .text p {
-        margin: 10px 0 20px; } }
   .about-page .description .points-list {
     margin: 40px 0;
     -ms-flex-wrap: wrap;
@@ -5988,88 +5976,6 @@ body.fixed-header {
         @media only screen and (max-width: 640px) {
           .about-page .description .points-list .points-item:nth-child(2n) {
             margin-left: 0; } }
-
-.about-page .product {
-  padding: 100px 0;
-  background: #fafafa; }
-  @media only screen and (max-width: 640px) {
-    .about-page .product {
-      padding: 40px 0; } }
-  .about-page .product .text {
-    text-align: center; }
-    .about-page .product .text h3 {
-      font-size: 2.625rem;
-      font-weight: bolder; }
-      @media only screen and (max-width: 640px) {
-        .about-page .product .text h3 {
-          font-size: 2.3rem; } }
-    .about-page .product .text p {
-      margin: 20px 0 30px; }
-      @media only screen and (max-width: 640px) {
-        .about-page .product .text p {
-          margin: 10px 0 20px; } }
-  .about-page .product .points-list {
-    margin: 40px 0;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    @media only screen and (max-width: 640px) {
-      .about-page .product .points-list {
-        flex-direction: column; } }
-    @media only screen and (max-width: 640px) {
-      .about-page .product .points-list {
-        margin: 20px 0 0; } }
-    .about-page .product .points-list .points-item {
-      width: calc((100% - 40px)/3);
-      margin-right: 20px;
-      margin-bottom: 20px; }
-      .about-page .product .points-list .points-item:nth-child(3n+0) {
-        margin-right: 0; }
-      .about-page .product .points-list .points-item:nth-child(1) .text p, .about-page .product .points-list .points-item:nth-child(2) .text p, .about-page .product .points-list .points-item:nth-child(3) .text p {
-        height: 380px; }
-      @media only screen and (max-width: 960px) {
-        .about-page .product .points-list .points-item {
-          width: calc((100% - 20px)/2); }
-          .about-page .product .points-list .points-item:nth-child(3n+0) {
-            margin-right: 20px; }
-          .about-page .product .points-list .points-item:nth-child(2n) {
-            margin-right: 0; }
-          .about-page .product .points-list .points-item:nth-child(1) .text p, .about-page .product .points-list .points-item:nth-child(2) .text p, .about-page .product .points-list .points-item:nth-child(5) .text p, .about-page .product .points-list .points-item:nth-child(6) .text p {
-            height: 155px; }
-          .about-page .product .points-list .points-item:nth-child(3) .text p, .about-page .product .points-list .points-item:nth-child(4) .text p {
-            height: 265px; } }
-      @media only screen and (max-width: 640px) {
-        .about-page .product .points-list .points-item {
-          width: 100%; }
-          .about-page .product .points-list .points-item .text p {
-            height: auto !important; } }
-    .about-page .product .points-list .img-box {
-      text-align: center;
-      background-color: #fff; }
-    .about-page .product .points-list .text {
-      background: #fff;
-      padding: 60px 60px 40px; }
-      @media screen and (max-width: 1300px) {
-        .about-page .product .points-list .text {
-          padding: 60px 30px 40px; } }
-      @media screen and (max-width: 1170px) {
-        .about-page .product .points-list .text {
-          padding: 60px 15px 40px; } }
-      @media only screen and (max-width: 640px) {
-        .about-page .product .points-list .text {
-          padding: 30px 15px 20px; } }
-      .about-page .product .points-list .text h4 {
-        font-size: 2rem;
-        font-weight: bolder;
-        height: 114px; }
-        @media only screen and (max-width: 960px) {
-          .about-page .product .points-list .text h4 {
-            height: auto; } }
-        @media only screen and (max-width: 640px) {
-          .about-page .product .points-list .text h4 {
-            font-size: 1.5rem; } }
-      .about-page .product .points-list .text p {
-        line-height: 2em;
-        height: 250px; }
 
 .about-page .culture {
   padding: 100px 0; }
@@ -6172,6 +6078,73 @@ body.fixed-header {
         @media only screen and (max-width: 640px) {
           .about-page .gongyi .points-list .desc p {
             height: auto; } }
+
+.about-page .product .text {
+  text-align: center;
+  margin-bottom: 40px; }
+  .about-page .product .text .title {
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 38px;
+    color: #333; }
+  .about-page .product .text p {
+    margin-bottom: 25px; }
+
+.about-page .product .content {
+  width: 1330px;
+  padding: 0 15px;
+  max-width: 100%; }
+
+.about-page .product .points-list {
+  display: flex;
+  flex-wrap: wrap; }
+  .about-page .product .points-list .points-item {
+    width: 32%;
+    margin: 0 0.53% 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .about-page .product .points-list .points-item .img-box {
+      width: 100%; }
+      .about-page .product .points-list .points-item .img-box img {
+        width: 100%; }
+    .about-page .product .points-list .points-item .title {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      color: #FFF;
+      font-size: 16px;
+      line-height: 100px;
+      padding-top: 20px;
+      text-align: center;
+      font-weight: 400;
+      margin: 0;
+      transition: all ease-out 300ms 20ms;
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.85), black); }
+    .about-page .product .points-list .points-item .text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 35px;
+      color: #FFF;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(23, 23, 23, 0.55);
+      transition: all ease-out 400ms 120ms;
+      opacity: 0; }
+      .about-page .product .points-list .points-item .text p {
+        text-align: justify;
+        font-weight: 400;
+        font-size: 14px; }
+    .about-page .product .points-list .points-item:hover .title {
+      transition: all ease-in 300ms 20ms;
+      opacity: 0;
+      transform: translateY(100%); }
+    .about-page .product .points-list .points-item:hover .text {
+      transition: all ease-out 400ms 120ms;
+      opacity: 1; }
 
 .course-page .banner {
   background-position: center;
