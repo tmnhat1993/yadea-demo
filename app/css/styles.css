@@ -6255,7 +6255,8 @@ body.fixed-header {
         color: #4c4c4c; }
 
 .supplier-page .banner {
-  background: #fff url("../img/supplier-banner.jpg") no-repeat top; }
+  background-size: cover;
+  background-position: center center; }
 
 .supplier-page .intro {
   font-size: 1.25rem;
