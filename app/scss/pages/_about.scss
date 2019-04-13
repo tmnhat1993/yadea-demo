@@ -782,6 +782,21 @@
     }
 
     @media #{$information-tablet}{
+      .text{
+        text-align: center;
+        margin-bottom: 35px;
+
+        .title{
+          letter-spacing: 1px;
+          font-size: 32px;
+        }
+
+        p{
+          font-size: 14px;
+          margin-bottom: 23px;
+        }
+      }
+
       .points-list{
         .points-item{
           width: 48%;
@@ -847,6 +862,21 @@
     }
 
     @media #{$information-phone}{
+      .text{
+        text-align: center;
+        margin-bottom: 35px;
+
+        .title{
+          font-size: 20px;
+          margin-bottom: 12px;
+        }
+
+        p{
+          font-size: 13px;
+          margin-bottom: 23px;
+        }
+      }
+
       .points-list{
         .points-item{
           width: 100%;
@@ -873,6 +903,20 @@
     }
 
     @media #{$information-sm-phone}{
+      .text{
+        margin-bottom: 25px;
+
+        .title{
+          font-size: 18px;
+          margin-bottom: 12px;
+        }
+
+        p{
+          font-size: 13px;
+          margin-bottom: 20px;
+        }
+      }
+
       .points-list{
         .points-item{
           width: 100%;

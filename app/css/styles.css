@@ -6349,6 +6349,15 @@ body.fixed-header {
         margin-bottom: 13.5px; } }
 
 @media only screen and (max-width: 768px) {
+  .about-page .product .text {
+    text-align: center;
+    margin-bottom: 35px; }
+    .about-page .product .text .title {
+      letter-spacing: 1px;
+      font-size: 32px; }
+    .about-page .product .text p {
+      font-size: 14px;
+      margin-bottom: 23px; }
   .about-page .product .points-list .points-item {
     width: 48%;
     margin: 0 1% 10px; }
@@ -6394,6 +6403,15 @@ body.fixed-header {
       transition: none; } }
 
 @media only screen and (max-width: 480px) {
+  .about-page .product .text {
+    text-align: center;
+    margin-bottom: 35px; }
+    .about-page .product .text .title {
+      font-size: 20px;
+      margin-bottom: 12px; }
+    .about-page .product .text p {
+      font-size: 13px;
+      margin-bottom: 23px; }
   .about-page .product .points-list .points-item {
     width: 100%;
     margin: 0 0 10px; }
@@ -6410,6 +6428,14 @@ body.fixed-header {
         font-size: 15px; } }
 
 @media only screen and (max-width: 330px) {
+  .about-page .product .text {
+    margin-bottom: 25px; }
+    .about-page .product .text .title {
+      font-size: 18px;
+      margin-bottom: 12px; }
+    .about-page .product .text p {
+      font-size: 13px;
+      margin-bottom: 20px; }
   .about-page .product .points-list .points-item {
     width: 100%;
     margin: 0 0 8px; }
