@@ -3836,26 +3836,41 @@ body.with-overlay section, body.with-overlay header {
         #page-header .sub-menu#about-us-sub-menu .sub-menu__wrapper__item {
           margin: 0;
           padding-top: 25px;
-          padding-bottom: 40px;
+          padding-bottom: 30px;
           background-color: transparent;
           transition: all ease-out 150ms 20ms;
           border-right: 0.5px solid #E4E4E4;
           position: relative; }
+          #page-header .sub-menu#about-us-sub-menu .sub-menu__wrapper__item img {
+            width: 100%; }
           #page-header .sub-menu#about-us-sub-menu .sub-menu__wrapper__item__detail {
-            padding: 0 12px; }
+            padding: 0 12px;
+            text-align: center; }
             #page-header .sub-menu#about-us-sub-menu .sub-menu__wrapper__item__detail .sub-title {
               margin-top: 16px;
-              margin-bottom: 5px; }
-            #page-header .sub-menu#about-us-sub-menu .sub-menu__wrapper__item__detail .fa {
+              margin-bottom: 5px;
+              transition: all ease-out 200ms 20ms; }
+            #page-header .sub-menu#about-us-sub-menu .sub-menu__wrapper__item__detail .desc {
+              transition: all ease-out 200ms 20ms; }
+            #page-header .sub-menu#about-us-sub-menu .sub-menu__wrapper__item__detail .line {
+              width: 60px;
+              height: 4px;
+              margin: auto;
+              border-radius: 2px;
+              background-color: #f36d21;
               position: absolute;
-              bottom: 20px;
-              left: 25px;
-              color: #f36d21;
-              transform: translateX(0); }
-          #page-header .sub-menu#about-us-sub-menu .sub-menu__wrapper__item:hover {
-            background-color: #EFEFEF; }
-            #page-header .sub-menu#about-us-sub-menu .sub-menu__wrapper__item:hover .fa {
-              animation: aboutus-arrow 700ms infinite ease-in-out; }
+              bottom: 25px;
+              left: 50%;
+              transition: all ease-out 300ms 20ms;
+              -webkit-transform: translateX(-50%) scaleX(0);
+              transform: translateX(-50%) scaleX(0); }
+          #page-header .sub-menu#about-us-sub-menu .sub-menu__wrapper__item:hover .sub-menu__wrapper__item__detail .sub-title {
+            color: #f36d21; }
+          #page-header .sub-menu#about-us-sub-menu .sub-menu__wrapper__item:hover .sub-menu__wrapper__item__detail .desc {
+            color: #f36d21; }
+          #page-header .sub-menu#about-us-sub-menu .sub-menu__wrapper__item:hover .line {
+            -webkit-transform: translateX(-50%) scaleX(1);
+            transform: translateX(-50%) scaleX(1); }
   @media only screen and (max-width: 820px) {
     #page-header {
       position: relative; }
@@ -4046,14 +4061,6 @@ body.fixed-header {
       background-color: #e02e2a; }
     .color-variations__item.yellow {
       background-color: #fff307; }
-
-@keyframes aboutus-arrow {
-  0% {
-    transform: translateX(0px); }
-  50% {
-    transform: translateX(2px); }
-  100% {
-    transform: translateX(0px); } }
 
 .footer {
   padding-top: 90px; }
