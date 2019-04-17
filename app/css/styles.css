@@ -6710,7 +6710,7 @@ body.fixed-header {
       .section-shop-listing #storemapper.show_categories #storemapper-form .storemapper-categories .storemapper-dropdown-btn:after {
         content: '';
         display: inline-block;
-        background-image: url("../../img/icons/filter-icon.png");
+        background-image: url("../img/icons/filter-icon.png");
         background-repeat: no-repeat;
         background-size: 24px 12px;
         width: 28px;
