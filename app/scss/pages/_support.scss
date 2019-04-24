@@ -4,8 +4,7 @@
   padding-top: 60px;
 
   .support-type{
-    padding-bottom: 70px;
-    margin-bottom: 40px;
+    padding-bottom: 100px;
 
     &__item{
       display: -webkit-flex;
@@ -19,7 +18,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 10px;
+        margin-bottom: 14px;
       }
 
       &__detail{
@@ -28,8 +27,7 @@
         .page-desc{
           font-weight: 700;// bold
           margin: 0;
-          margin-bottom: 5px;
-          font-size: 22px;
+          font-size: 20px;
         }
 
         .sm-cta{
@@ -48,7 +46,7 @@
   .contact-info{
     &__title{
       font-weight: 900; // black
-      font-size: 36px;
+      font-size: 32px;
     }
 
     &__details{
@@ -60,8 +58,8 @@
         display: flex;
 
         &__icon{
-          width: 50px;
-          height: 50px;
+          width: 40px;
+          height: 40px;
           display: -webkit-flex;
           display: flex;
           align-items: center;
@@ -70,7 +68,7 @@
         }
 
         p{
-          font-size: 30px;
+          font-size: 26px;
           color: #000;
           opacity: 0.8;
           font-weight: 400; // regular
@@ -84,13 +82,14 @@
     padding-top: 50px;
 
     .support-type{
-      margin-bottom: 30px;
+      padding-bottom: 80px;
+
 
       &__item{
 
         &__image{
           height: 70px;
-          margin-bottom: 12px;
+          margin-bottom: 16px;
 
           img{
             max-height: 70px;
@@ -99,8 +98,8 @@
 
         &__detail{
           .page-desc{
-            margin-bottom: 5px;
             font-size: 18px;
+            line-height: 24px;
           }
 
           .sm-cta{
@@ -115,7 +114,7 @@
 
     .contact-info{
       &__title{
-        font-size: 30px;
+        font-size: 28px;
       }
 
       &__details{
@@ -124,13 +123,13 @@
         &__item{
 
           &__icon{
-            width: 33px;
-            height: 33px;
+            width: 31px;
+            height: 31px;
             margin-right: 20px;
           }
 
           p{
-            font-size: 20px;
+            font-size: 18px;
           }
         }
       }
@@ -141,7 +140,7 @@
     padding-top: 45px;
 
     .support-type{
-      margin-bottom: 10px;
+      padding-bottom: 70px;
 
       &__item{
 

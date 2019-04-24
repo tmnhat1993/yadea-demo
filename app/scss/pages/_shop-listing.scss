@@ -23,7 +23,7 @@
           height: 40px;
           border: 1px solid #DDD;
           border-radius: 19px;
-          padding-right: 115px;
+          padding-right: 75px !important;
           box-shadow: none;
         }
 
@@ -70,8 +70,8 @@
         margin-top: 12px;
 
         .storemapper-dropdown-btn{
-          font-size: 14px;
-          font-weight: 700;
+          font-size: 15px;
+          font-weight: 400;
 
           .caret{
             display: none;
@@ -82,9 +82,10 @@
             display: inline-block;
             background-image: url('../img/icons/filter-icon.png');
             background-repeat: no-repeat;
-            background-size: 20px 12px;
+            background-size: 22px 14px;
             width: 28px;
             height: 15px;
+            margin-left: 2px;
             background-position: center;
           }
         }
@@ -97,24 +98,11 @@
         box-shadow: none;
         border: 1px solid #ddd;
 
-        &.storemapper-selected{
-          background-color: #fff;
-          color: $text-color !important;
-          border-color: $main-color;
-
-          p{
-            color: $text-color !important;
-
-            svg{
-              fill: $main-color;
-            }
-          }
-        }
-
         h4{
           color: $main-color !important;
           font-size: 16px;
           font-weight: 700;
+          display: inline-block;
           background: -webkit-linear-gradient(0deg, #F91201, #F86704, #F26D20);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -122,18 +110,17 @@
 
         p{
           font-size: 13px;
-          line-height: 22px;
+          line-height: 19px;
           position: relative;
           color: $text-color;
-          margin-bottom: 0;
+          margin-bottom: 5px;
 
           a{
-            text-decoration: none;
-            color: $text-color;
+            color: $main-color;
           }
 
           svg{
-            display: none;
+            fill: $main-color;
           }
 
           &:before{
@@ -145,30 +132,6 @@
             position: absolute;
             background-repeat: no-repeat;
             background-position: center;
-          }
-
-          &.storemapper-address{
-            padding-left: 25px;
-            &:before{
-              background-image: url('../img/icons/shop/pin.png');
-              background-size: auto 15px;
-            }
-          }
-
-          &.storemapper-custom-1{
-            padding-left: 25px;
-            &:before{
-              background-image: url('../img/icons/shop/open.png');
-              background-size: 18px auto;
-            }
-          }
-
-          &.storemapper-custom-2{
-            padding-left: 25px;
-            &:before{
-              background-image: url('../img/icons/shop/phone.png');
-              background-size: 15px 15px;
-            }
           }
         }
 
@@ -200,6 +163,43 @@
               border-radius: 13px;
               padding: 0;
               width: 150px;
+            }
+          }
+        }
+
+        &.storemapper-selected{
+          background-color: $main-color;
+          color: $white !important;
+          border-color: $main-color;
+
+          p{
+            color: $white !important;
+
+            a{
+              color: $white;
+            }
+
+            svg{
+              fill: $white;
+            }
+          }
+
+          h4{
+            color: $white !important;
+            font-size: 16px;
+            font-weight: 700;
+            background: $white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          .storemapper_btn-wrap {
+            .storemapper_view {
+              a {
+                color: $white;
+                background-color: transparent;
+                border-color: $white;
+              }
             }
           }
         }
@@ -259,7 +259,7 @@
           #storemapper-zip{
             height: 38px;
             border-radius: 19px;
-            padding-right: 100px;
+            padding-right: 73px !important;
           }
 
           #storemapper-go{
@@ -283,11 +283,11 @@
           margin-top: 8px;
 
           .storemapper-dropdown-btn{
-            font-size: 13px;
+            font-size: 14px;
             &:after{
-              background-size: 16px 10px;
+              background-size: 18px 12px;
               width: 18px;
-              height: 10px;
+              height: 12px;
             }
           }
         }
@@ -355,7 +355,7 @@
           #storemapper-zip{
             height: 36px;
             border-radius: 18px;
-            padding-right: 100px;
+            padding-right: 72px !important;
           }
 
           #storemapper-go{
@@ -379,11 +379,11 @@
           margin-top: 8px;
 
           .storemapper-dropdown-btn{
-            font-size: 13px;
+            font-size: 14px;
             &:after{
-              background-size: 16px 10px;
+              background-size: 18px 11px;
               width: 18px;
-              height: 10px;
+              height: 11px;
             }
           }
         }
@@ -562,6 +562,55 @@
           }
         }
       }
+    }
+  }
+}
+
+/* Additional Code */
+#storemapper{
+  .storemapper-popup{
+    .storemapper-popup-name{
+      font-size: 18px;
+      color: $main-color;
+    }
+
+    .storemapper-popup-address{
+      padding: 0 !important;
+      margin-bottom: 5px !important;
+      svg{
+        display: none !important;
+      }
+    }
+
+    p{
+      a{
+        color: $main-color;
+
+        svg{ fill: $main-color !important; }
+      }
+    }
+
+    .btn.storemapper-map-directions{
+      padding: 0;
+      color: $main-color;
+      font-weight: 500;
+      font-size: 14px !important;
+      
+      @media #{$information-phone} {
+        font-size: 12px !important;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .gm-ui-hover-effect{
+    top: 2px !important;
+    right: 2px !important;
+    font-size: 18px;
+
+    img{
+      width: 18px !important;
+      height: 18px !important;
     }
   }
 }
