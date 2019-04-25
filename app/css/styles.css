@@ -5558,9 +5558,12 @@ body.fixed-header {
         #support-body .support-type__item__detail .page-desc {
           font-weight: 700;
           margin: 0;
-          font-size: 20px; }
+          font-size: 20px;
+          line-height: 26px; }
         #support-body .support-type__item__detail .sm-cta {
-          font-weight: 400; }
+          font-weight: 400;
+          display: inline-block;
+          line-height: 26px; }
           #support-body .support-type__item__detail .sm-cta:after {
             content: "\00bb";
             margin-left: 8px;
@@ -5601,7 +5604,8 @@ body.fixed-header {
           font-size: 18px;
           line-height: 24px; }
         #support-body .support-type__item__detail .sm-cta {
-          font-size: 16px; }
+          font-size: 16px;
+          line-height: 24px; }
           #support-body .support-type__item__detail .sm-cta:after {
             margin-left: 6px; }
       #support-body .contact-info__title {
@@ -5625,10 +5629,11 @@ body.fixed-header {
           #support-body .support-type__item__image img {
             max-height: 60px; }
         #support-body .support-type__item__detail .page-desc {
-          margin-bottom: 5px;
-          font-size: 16px; }
+          font-size: 16px;
+          line-height: 20px; }
         #support-body .support-type__item__detail .sm-cta {
-          font-size: 12px; }
+          font-size: 12px;
+          line-height: 16px; }
           #support-body .support-type__item__detail .sm-cta:after {
             margin-left: 6px; }
       #support-body .contact-info__title {
