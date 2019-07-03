@@ -5217,6 +5217,95 @@ body.fixed-header {
       #home-banner-3 .slider__item__context {
         padding: 20px 20px 30px; } }
 
+/* Home Green */
+#home-green .green-container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 40px 15px;
+  margin: auto; }
+  #home-green .green-container .title {
+    font-family: Arial, sans-serif;
+    color: #363c41;
+    font-size: 29px;
+    font-weight: 700; }
+  #home-green .green-container .green-row {
+    display: flex;
+    justify-content: space-around; }
+    #home-green .green-container .green-row .custom-col {
+      flex-basis: 46%;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+      border-radius: 15px;
+      padding: 35px 0; }
+      #home-green .green-container .green-row .custom-col .amount-counter {
+        display: flex;
+        justify-content: center; }
+        #home-green .green-container .green-row .custom-col .amount-counter .counter-groups, #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex; }
+        #home-green .green-container .green-row .custom-col .amount-counter .counter-groups {
+          justify-content: center; }
+        #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item {
+          width: 40px;
+          height: 50px;
+          margin: 0 2px;
+          position: relative; }
+          #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item:after {
+            content: '';
+            height: 1px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            background-color: #FFF;
+            z-index: 3;
+            left: 0; }
+          #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .current-number, #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .next-number {
+            color: white;
+            position: absolute;
+            width: 40px;
+            height: 50px;
+            display: block; }
+            #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .current-number .top, #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .current-number .bottom, #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .next-number .top, #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .next-number .bottom {
+              width: 40px;
+              position: absolute;
+              left: 0;
+              display: block;
+              background-color: #96bd12;
+              overflow: hidden;
+              font-size: 30px;
+              line-height: 25px;
+              font-weight: 600; }
+            #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .current-number .top, #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .next-number .top {
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
+              padding-top: 10px;
+              height: 25px;
+              z-index: 1;
+              transition: all ease-out 1500ms;
+              transform-origin: center bottom -1px;
+              backface-visibility: visible; }
+              #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .current-number .top.flip, #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .next-number .top.flip {
+                transform: rotateX(180deg); }
+            #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .current-number .bottom, #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .next-number .bottom {
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px;
+              top: 25px;
+              height: 25px;
+              padding-bottom: 0;
+              z-index: 0; }
+              #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .current-number .bottom .text, #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .next-number .bottom .text {
+                transform: translateY(-10px);
+                display: block; }
+          #home-green .green-container .green-row .custom-col .amount-counter .counter-numbers .counter-item .current-number {
+            z-index: 2; }
+    #home-green .green-container .green-row .transform-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
 /* ======= PRODUCTS PAGE STYLE SHEET ====== */
 /* Products Head */
 #products-head {
