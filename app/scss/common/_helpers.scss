@@ -1,5 +1,5 @@
 /* ======================
-* Margin And Padding Generator 
+* Margin And Padding Generator
 ====================== */
 $spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 180, 200); // Adjust this to include the pixel amounts you need.
 $sides: (top, bottom, left, right); // Leave this variable alone
@@ -9,7 +9,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     .m#{str-slice($side, 0, 1)}-#{$space} {
       margin-#{$side}: #{$space}px !important;
     }
-  
+
     .p#{str-slice($side, 0, 1)}-#{$space} {
       padding-#{$side}: #{$space}px !important;
     }
@@ -35,8 +35,51 @@ $sides: (top, bottom, left, right); // Leave this variable alone
   display: -webkit-flex;
   display: flex;
 }
+@mixin flex-important() {
+  display: -moz-box!important;
+  display: -ms-flexbox!important;
+  display: -webkit-flex!important;
+  display: flex!important;
+}
 
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
 
+@mixin animation($str) {
+  @include css3-prefix('animation', $str);
+}
+
+@mixin border-radius($radius: 5px) {
+  @include css3-prefix('border-radius', $radius);
+}
+
+@mixin transition($properties...) {
+
+  @if length($properties) >= 1 {
+    @include css3-prefix('transition', $properties);
+  } @else {
+    @include css3-prefix('transition', "all 0.2s ease-in-out 0s");
+  }
+}
+
+@mixin transform($params) {
+  @include css3-prefix('transform', $params);
+}
 /* ============================
  * Color Helper
  * ============================ */
