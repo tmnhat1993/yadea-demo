@@ -973,3 +973,150 @@
 
   @media #{$information-sm-phone} {}
 }
+
+
+/* Home Flip Clock */
+#home-flip-clock {
+  text-align: center;
+  border-top: 1px solid #d3d6d7;
+  padding: 77px 0px;
+  color: #363c41;
+  h3 {
+    font-size: 29px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 58px;
+  }
+  .flip-content {
+    position: relative;
+    .btn-image-compare {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      @include transform(translate(-50%,-50%));
+    }
+  }
+  .item {
+    -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,.25);
+    -moz-box-shadow: 0px 0px 15px rgba(0,0,0,.25);
+    box-shadow: 0px 0px 15px rgba(0,0,0,.25);
+    @include border-radius(5px);
+    padding: 48px 0px;
+    h4 {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 11px;
+    }
+    // CUSTOM FLIP CLOCK
+    .flip-item {
+      position: relative;
+      display: inline-block;
+      .flip-clock-wrapper {
+        display: inline-block;
+        width: unset;
+        margin: 0px;
+        ul {
+          width: 40px;
+          height: 52px;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          margin: 3px;
+          li {
+            line-height: 52px;
+            a {
+              div {
+                font-size: 44px;
+              }
+              .down {
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+              }
+            }
+          }
+        }
+        &.number-decrease {
+          ul {
+            position: relative;
+            &.add-dot:before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: calc(100% + 5px);
+              width: 5px;
+              height: 5px;
+              background: #12b7bd;
+              z-index: 10;
+              @include border-radius(50%);
+              margin-top: -3px;
+            }
+            li {
+              a {
+                div {
+                  .inn {
+                    font-size: 44px;
+                    color: #ffffff;
+                    text-shadow: none;
+                    background-color: #12b7bd;
+                    @include border-radius(3px);
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.number-increase {
+          ul {
+            position: relative;
+            &.add-dot:before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: calc(100% + 5px);
+              width: 5px;
+              height: 5px;
+              background: #96bd12;
+              z-index: 10;
+              @include border-radius(50%);
+              margin-top: -3px;
+            }
+            li {
+              a {
+                div {
+                  .inn {
+                    font-size: 44px;
+                    color: #ffffff;
+                    text-shadow: none;
+                    background-color: #96bd12;
+                    @include border-radius(3px);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      span {
+        position: absolute;
+        top: 0px;
+        left: calc(100% + 6px);
+        line-height: 20px;
+        font-size: 17px;
+        color: #000000;
+        text-align: left;
+      }
+    }
+    p {
+      font-size: 16px;
+      color: #000000;
+      margin-bottom: 30px;
+    }
+    &-image {
+      min-height: 157px;
+      img {
+
+      }
+    }
+  }
+}

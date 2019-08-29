@@ -17,6 +17,10 @@
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:100,200,300,400,500,600,700,800,900&amp;subset=vietnamese" rel="stylesheet">
 
+    <!--Flip Clock-->
+    <link rel="stylesheet" href="css/vendors/flipclock.css">
+
+
     <link rel="stylesheet" href="css/styles.css">
     <!-- Main stylesheet Reference -->
 
@@ -868,8 +872,12 @@
 <section class="section" id="home-flip-clock">
     <div class="container">
         <!-- Title -->
-        <h3>Các bạn đã đồng hành</h3>
-        <div class="row">
+        <h3>Các bạn đã đồng hành cùng yadea</h3>
+        <div class="row flip-content">
+            <!--Image button compare-->
+            <div class="btn-image-compare">
+                <img src="./img/button-compare.png" alt="compare">
+            </div>
             <!--Number decrement-->
             <div class="col-lg-6">
                 <div class="item">
@@ -879,6 +887,9 @@
                         <span>Kg</span>
                     </div>
                     <p>Khí CO2 thải ra</p>
+                    <div class="item-image">
+                        <img src="./img/decrease.png" alt="decrease">
+                    </div>
                 </div>
             </div>
             <!--Number increment-->
@@ -890,6 +901,9 @@
                         <span>Cây xanh</span>
                     </div>
                     <p>Làm sạch không khí</p>
+                    <div class="item-image">
+                        <img src="./img/increase.png" alt="increase">
+                    </div>
                 </div>
             </div>
         </div>
@@ -1031,6 +1045,9 @@
 
 <!-- Slick Slider -->
 <script src="js/slick.min.js"></script>
+
+<!--Flip Clock-->
+<script src="js/flipclock.js"></script>
 
 <!-- Main Script -->
 <script src="js/scripts-bundled.js"></script>
