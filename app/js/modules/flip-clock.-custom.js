@@ -15,6 +15,7 @@ export default class FlipClockCustom {
    *  EVENTS
    * =================================== */
   bindEvents(){
+    this.CheckNameUnit();
     this.NumberDecrease();
     this.NumberIncrease();
   }
@@ -24,6 +25,7 @@ export default class FlipClockCustom {
   /* ===================================
    *  METHODS
    * =================================== */
+
   NumberDecrease () {
     // Declare variable flip clock
     let chars = [];
@@ -59,12 +61,11 @@ export default class FlipClockCustom {
   * */
     var numberDecrease = $('.number-decrease').FlipClock(numberDec, {
       clockFace: 'Counter',
-      autostart: false
     });
     setTimeout(function() {
       setInterval(function() {
-        // numberDecrease.decrement();
-      }, 1000);
+        numberDecrease.decrement();
+      }, 60000);
     });
     // detect of pos to margin
     $('.number-decrease .flip').each(function (i, value) {
@@ -111,12 +112,11 @@ export default class FlipClockCustom {
   * */
     var numberIncrease = $('.number-increase').FlipClock(numberInc, {
       clockFace: 'Counter',
-      autostart: false
     });
     setTimeout(function() {
       setInterval(function() {
-        // numberIncrease.increment();
-      }, 1000);
+        numberIncrease.increment();
+      }, 60000);
     });
     // detect of pos to margin
     $('.number-increase .flip').each(function (i, value) {
@@ -127,5 +127,12 @@ export default class FlipClockCustom {
         }
       })
     })
+  }
+
+  CheckNameUnit () {
+    if(window.innerWidth <= 1024) {
+      $('.unit01').html('Tấn')
+      $('.unit02').html('Nghìn cây xanh')
+    }
   }
 }

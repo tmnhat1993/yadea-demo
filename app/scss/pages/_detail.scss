@@ -463,6 +463,7 @@
 @media #{$information-tablet} {
   .slide-image-reality {
     padding: 60px 0px;
+    overflow: hidden;
     //Title
     h3 {
       font-size: 18px;
@@ -478,6 +479,11 @@
         margin: 0 -20px;
         .slick-slide {
           margin: 0 20px;
+          .item {
+            &:before {
+              content: none;
+            }
+          }
         }
         .slick-center {
           @include transform(scale(1.25));
@@ -493,11 +499,5 @@
         }
       }
     }
-  }
-}
-
-@media #{$information-phone} {
-  .slide-image-reality {
-    overflow: hidden;
   }
 }

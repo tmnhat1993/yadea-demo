@@ -60,7 +60,7 @@ export default class SliderDetail {
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 769,
           settings: {
             arrows: false,
             centerMode: false,
