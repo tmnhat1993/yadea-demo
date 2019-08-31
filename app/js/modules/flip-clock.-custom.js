@@ -1,6 +1,3 @@
-// Import Lodash As Demo
-import * as _ from 'lodash';
-
 export default class FlipClockCustom {
   /* ===================================
    *  CONSTRUCTOR
@@ -31,6 +28,7 @@ export default class FlipClockCustom {
     let chars = [];
     let positions = [];
     let numberDec = 55975444;
+
     // Create our number formatter.
     let formatter = new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -53,12 +51,12 @@ export default class FlipClockCustom {
       positions.push(chars[i] - i)
     }
     /*
-  * Example: formatChar = 1 000 000
-  * when you loop formatChar, chars = [1, 5]
-  * when you loop chars, positions = [1, 4]
-  * index of chars chars[0] = 1, chars[1] = 5 => chars[0] - 0 = 1 and chars[1] - 1 = 4
-  * add new value of array positions, => positions = [1, 4]
-  * */
+      * Example: formatChar = 1 000 000
+      * when you loop formatChar, chars = [1, 5]
+      * when you loop chars, positions = [1, 4]
+      * index of chars chars[0] = 1, chars[1] = 5 => chars[0] - 0 = 1 and chars[1] - 1 = 4
+      * add new value of array positions, => positions = [1, 4]
+      * */
     var numberDecrease = $('.number-decrease').FlipClock(numberDec, {
       clockFace: 'Counter',
     });
@@ -67,6 +65,7 @@ export default class FlipClockCustom {
         numberDecrease.decrement();
       }, 60000);
     });
+
     // detect of pos to margin
     $('.number-decrease .flip').each(function (i, value) {
       positions.forEach(function (item) {
@@ -77,6 +76,7 @@ export default class FlipClockCustom {
       })
     })
   }
+
   NumberIncrease () {
     // Declare variable flip clock
     let chars = [];
@@ -103,21 +103,24 @@ export default class FlipClockCustom {
     for (var i = 0; i < chars.length; i++) {
       positions.push(chars[i] - i)
     }
+
     /*
-  * Example: formatChar = 1 000 000
-  * when you loop formatChar, chars = [1, 5]
-  * when you loop chars, positions = [1, 4]
-  * index of chars chars[0] = 1, chars[1] = 5 => chars[0] - 0 = 1 and chars[1] - 1 = 4
-  * add new value of array positions, => positions = [1, 4]
-  * */
+    * Example: formatChar = 1 000 000
+    * when you loop formatChar, chars = [1, 5]
+    * when you loop chars, positions = [1, 4]
+    * index of chars chars[0] = 1, chars[1] = 5 => chars[0] - 0 = 1 and chars[1] - 1 = 4
+    * add new value of array positions, => positions = [1, 4]
+    * */
     var numberIncrease = $('.number-increase').FlipClock(numberInc, {
       clockFace: 'Counter',
     });
+
     setTimeout(function() {
       setInterval(function() {
         numberIncrease.increment();
       }, 60000);
     });
+
     // detect of pos to margin
     $('.number-increase .flip').each(function (i, value) {
       positions.forEach(function (item) {

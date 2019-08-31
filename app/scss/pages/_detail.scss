@@ -45,38 +45,46 @@
   }
   //custom dots slick
   .slick-dots {
-    margin: 0px;
+    margin: 0;
     right: unset;
     left: 50%;
-    @include transform(translateX(calc(-50% - 220px)));
-    @include flex;
     align-items: center;
     justify-content: center;
+    @include transform(translateX(calc(-50% - 220px)));
+    @include flex;
+
     li {
       display: inline-block;
       width: 30px;
       height: 30px;
-      margin: 0px 9px;
+      margin: 0 9px;
       box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
       @include border-radius(50%);
       @include transition(all 0.3s);
+
       &:before {
         content: none;
       }
+
       &:nth-child(1) {
         background: #adadad;
       }
+
       &:nth-child(2) {
         background: #313234;
       }
+
       &:nth-child(3) {
         background: #ffffff;
       }
+
       &:nth-child(4) {
         background: #c42835;
       }
+
       &.slick-active {
         @include transform(scale(1.25));
+
         &:after {
           content: '';
           position: absolute;
@@ -97,6 +105,7 @@
     .slide-item-image {
       @include animation(animate-slide-02 1.5s forwards);
     }
+
     .slide-item-caption {
       @include animation(animate-slide-01 1.5s forwards);
     }
@@ -108,13 +117,15 @@
   .slide-detail {
     padding-bottom: 60px;
     .slide-item {
-      padding: 60px 0px;
+      padding: 60px 0;
       flex-direction: row;
+
       //Image
       &-image {
-        margin-right: 0px;
+        margin-right: 0;
         margin-bottom: 30px;
         width: 50%;
+
         img {
           width: 100%;
         }
@@ -122,36 +133,43 @@
 
       //Caption
       &-caption {
-        margin-left: 0px;
+        margin-left: 0;
         width: 50%;
         padding-left: 100px;
+
         h3 {
           font-size: 18px;
           margin-bottom: 15px;
         }
+
         a {
           font-size: 14px;
           padding: 10px 40px;
         }
       }
     }
+
     //custom dots slick
     .slick-dots {
-      margin: 0px;
+      margin: 0;
       left: 50%;
       @include transform(translateX(calc(-50% - 0px)));
+
       li {
         width: 25px;
         height: 25px;
-        margin: 0px 9px;
+        margin: 0 9px;
         box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
         @include border-radius(50%);
         @include transition(all 0.3s);
+
         &:before {
           content: none;
         }
+
         &.slick-active {
           @include transform(scale(1.25));
+
           &:after {
             width: 14px;
             height: 14px;
@@ -170,13 +188,15 @@
   .slide-detail {
     padding-bottom: 90px;
     .slide-item {
-      padding: 90px 0px;
+      padding: 90px 0;
       flex-direction: column;
+
       //Image
       &-image {
-        margin-right: 0px;
+        margin-right: 0;
         margin-bottom: 30px;
         width: 100%;
+
         img {
           width: 100%;
         }
@@ -184,14 +204,16 @@
 
       //Caption
       &-caption {
-        margin-left: 0px;
-        padding-left: 0px;
+        margin-left: 0;
+        padding-left: 0;
         width: 100%;
         text-align: center;
+
         h3 {
           font-size: 18px;
           margin-bottom: 15px;
         }
+
         a {
           font-size: 14px;
           padding: 10px 40px;
@@ -200,21 +222,25 @@
     }
     //custom dots slick
     .slick-dots {
-      margin: 0px;
+      margin: 0;
       left: 50%;
       @include transform(translateX(calc(-50% - 0px)));
+
       li {
         width: 25px;
         height: 25px;
-        margin: 0px 9px;
+        margin: 0 9px;
         box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
         @include border-radius(50%);
         @include transition(all 0.3s);
+
         &:before {
           content: none;
         }
+
         &.slick-active {
           @include transform(scale(1.25));
+
           &:after {
             width: 14px;
             height: 14px;

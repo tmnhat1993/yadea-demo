@@ -979,16 +979,19 @@
 #home-flip-clock {
   text-align: center;
   border-top: 1px solid #d3d6d7;
-  padding: 77px 0px;
+  padding: 77px 0;
   color: #363c41;
+
   h3 {
     font-size: 29px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 58px;
   }
+
   .flip-content {
     position: relative;
+
     .btn-image-compare {
       position: absolute;
       left: 50%;
@@ -996,26 +999,31 @@
       @include transform(translate(-50%,-50%));
     }
   }
+
   .item {
-    -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,.25);
-    -moz-box-shadow: 0px 0px 15px rgba(0,0,0,.25);
-    box-shadow: 0px 0px 15px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 0 15px rgba(0,0,0,.25);
+    box-shadow: 0 0 15px rgba(0,0,0,.25);
     @include border-radius(5px);
-    padding: 48px 0px;
+    padding: 48px 0;
+
     h4 {
       font-size: 18px;
       font-weight: bold;
       text-transform: uppercase;
       margin-bottom: 11px;
     }
+
     // CUSTOM FLIP CLOCK
     .flip-item {
       position: relative;
       display: inline-block;
+
       .flip-clock-wrapper {
         display: inline-block;
         width: unset;
-        margin: 0px;
+        margin: 0;
+
         ul {
           width: 40px;
           height: 52px;
@@ -1023,12 +1031,15 @@
           -moz-box-shadow: none;
           box-shadow: none;
           margin: 3px;
+
           li {
             line-height: 52px;
+
             a {
               div {
                 font-size: 44px;
               }
+
               .down {
                 border-bottom-left-radius: 3px;
                 border-bottom-right-radius: 3px;
@@ -1036,9 +1047,11 @@
             }
           }
         }
+
         &.number-decrease {
           ul {
             position: relative;
+
             &.add-dot:before {
               content: '';
               position: absolute;
@@ -1051,6 +1064,7 @@
               @include border-radius(50%);
               margin-top: -3px;
             }
+
             li {
               a {
                 div {
@@ -1066,9 +1080,11 @@
             }
           }
         }
+
         &.number-increase {
           ul {
             position: relative;
+
             &.add-dot:before {
               content: '';
               position: absolute;
@@ -1081,6 +1097,7 @@
               @include border-radius(50%);
               margin-top: -3px;
             }
+
             li {
               a {
                 div {
@@ -1097,9 +1114,10 @@
           }
         }
       }
+
       span {
         position: absolute;
-        top: 0px;
+        top: 0;
         left: calc(100% + 6px);
         line-height: 20px;
         font-size: 17px;
@@ -1107,11 +1125,13 @@
         text-align: left;
       }
     }
+
     p {
       font-size: 16px;
       color: #000000;
       margin-bottom: 30px;
     }
+
     &-image {
       min-height: 157px;
       img {
@@ -1119,12 +1139,16 @@
       }
     }
   }
+
+  // Responsive
   @media #{$information-lg-tablet} {
-    padding: 35px 0px;
+    padding: 35px 0;
+
     h3 {
       font-size: 18px;
       margin-bottom: 58px;
     }
+
     .flip-content {
       .btn-image-compare {
         left: 50%;
@@ -1132,15 +1156,19 @@
         @include transform(translate(-50%,-50%));
       }
     }
+
     .item {
-      padding: 45px 0px;
+      padding: 45px 0;
+
       &-first {
         margin-bottom: 100px;
       }
+
       h4 {
         font-size: 18px;
         margin-bottom: 11px;
       }
+
       // CUSTOM FLIP CLOCK
       .flip-item {
         position: relative;
@@ -1148,7 +1176,8 @@
         .flip-clock-wrapper {
           display: inline-block;
           width: unset;
-          margin: 0px;
+          margin: 0;
+
           ul {
             width: 40px;
             height: 52px;
@@ -1156,32 +1185,40 @@
             -moz-box-shadow: none;
             box-shadow: none;
             margin: 3px;
+
             li {
               line-height: 52px;
+
               a {
                 div {
                   font-size: 44px;
                 }
+
                 .down {
                   border-bottom-left-radius: 3px;
                   border-bottom-right-radius: 3px;
                 }
               }
             }
+
             //remove 3 item in mobile
             &:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3) {
               display: none;
             }
+
             &:nth-last-child(4) {
-              margin-right: 0px!important;
+              margin-right: 0 !important;
+
               &::before {
                 display: none;
               }
             }
           }
+
           &.number-decrease {
             ul {
               position: relative;
+
               &.add-dot:before {
                 content: '';
                 position: absolute;
@@ -1194,6 +1231,7 @@
                 @include border-radius(50%);
                 margin-top: -3px;
               }
+
               li {
                 a {
                   div {
@@ -1209,9 +1247,11 @@
               }
             }
           }
+
           &.number-increase {
             ul {
               position: relative;
+
               &.add-dot:before {
                 content: '';
                 position: absolute;
@@ -1224,6 +1264,7 @@
                 @include border-radius(50%);
                 margin-top: -3px;
               }
+
               li {
                 a {
                   div {
@@ -1240,9 +1281,10 @@
             }
           }
         }
+
         span {
           position: absolute;
-          top: 0px;
+          top: 0;
           left: calc(100% + 6px);
           line-height: 20px;
           font-size: 17px;
@@ -1250,17 +1292,33 @@
           text-align: left;
         }
       }
+
       p {
         font-size: 16px;
         color: #000000;
         margin-bottom: 30px;
       }
+
       &-image {
         min-height: 157px;
-        img {
-
-        }
       }
     }
   }
+
+  // Official Tablet Size
+  @media #{$information-tablet}{}
+
+  // Phone
+  @media #{$information-phone}{
+    .item {
+      padding: 45px 0;
+
+      h4 {
+        font-size: 22px;
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+  @media #{$information-sm-phone}{}
 }
