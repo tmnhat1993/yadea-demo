@@ -1,6 +1,3 @@
-// Import Lodash As Demo
-import * as _ from 'lodash';
-
 export default class SliderDetail {
   /* ===================================
    *  CONSTRUCTOR

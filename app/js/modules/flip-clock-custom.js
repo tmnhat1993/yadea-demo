@@ -22,7 +22,6 @@ export default class FlipClockCustom {
   /* ===================================
    *  METHODS
    * =================================== */
-
   NumberDecrease () {
     // Declare variable flip clock
     let chars = [];
