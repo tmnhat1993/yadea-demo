@@ -6,6 +6,7 @@
 @import 'common/_helpers';
 @import 'common/_typography';
 @import 'common/_elements';
+@import 'common/_animation';
 
 
 // Component
@@ -24,4 +25,6 @@
 @import "pages/about";
 @import "pages/course";
 @import "pages/supplier";
+@import "pages/detail";
+
 @import "pages/shop-listing";

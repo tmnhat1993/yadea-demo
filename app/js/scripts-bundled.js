@@ -17215,6 +17215,10 @@ var _products = _interopRequireDefault(__webpack_require__(20));
 
 var _support = _interopRequireDefault(__webpack_require__(21));
 
+var _sliderDetail = _interopRequireDefault(__webpack_require__(22));
+
+var _flipClock = _interopRequireDefault(__webpack_require__(23));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -17241,7 +17245,11 @@ function () {
 
     this.products = new _products.default(); // Supports Page
 
-    this.supports = new _support.default();
+    this.supports = new _support.default(); // Slider detail page
+
+    this.sliderDetail = new _sliderDetail.default(); // Flip Clock Custom
+
+    this.flipClockCustom = new _flipClock.default();
     this.bindEvents();
   }
   /* ===================================
@@ -19480,6 +19488,274 @@ function () {
 }();
 
 exports.default = Supports;
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _ = _interopRequireWildcard(__webpack_require__(0));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var SliderDetail =
+/*#__PURE__*/
+function () {
+  /* ===================================
+   *  CONSTRUCTOR
+   * =================================== */
+  function SliderDetail() {
+    _classCallCheck(this, SliderDetail);
+
+    // Elements Variable
+    this.bindEvents();
+  }
+  /* ===================================
+   *  EVENTS
+   * =================================== */
+
+
+  _createClass(SliderDetail, [{
+    key: "bindEvents",
+    value: function bindEvents() {
+      // Slick carousel product detail
+      this.SlideDetailPage(); // Slick carousel center mod image reality
+
+      this.SlideImageReality();
+    }
+    /* ===================================
+     *  METHODS
+     * =================================== */
+
+  }, {
+    key: "SlideDetailPage",
+    value: function SlideDetailPage() {
+      $('.slide-detail .slide-content').slick({
+        draggable: true,
+        arrows: false,
+        dots: true,
+        fade: true,
+        speed: 900,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+        touchThreshold: 100
+      });
+    }
+  }, {
+    key: "SlideImageReality",
+    value: function SlideImageReality() {
+      $('.slide-image-reality .slide-content').slick({
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3,
+        arrows: true,
+        prevArrow: '<div class="arrow prev"><img src="./img/arrow-left.png" alt="left"></div>',
+        nextArrow: '<div class="arrow next"><img src="./img/arrow-right.png" alt="right"></div>',
+        dots: false,
+        responsive: [{
+          breakpoint: 1025,
+          settings: {
+            arrows: false,
+            centerMode: true
+          }
+        }, {
+          breakpoint: 769,
+          settings: {
+            arrows: false,
+            centerMode: false,
+            slidesToShow: 1
+          }
+        }]
+      });
+    }
+  }]);
+
+  return SliderDetail;
+}();
+
+exports.default = SliderDetail;
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var FlipClockCustom =
+/*#__PURE__*/
+function () {
+  /* ===================================
+   *  CONSTRUCTOR
+   * =================================== */
+  function FlipClockCustom() {
+    _classCallCheck(this, FlipClockCustom);
+
+    // Elements Variable
+    this.bindEvents();
+  }
+  /* ===================================
+   *  EVENTS
+   * =================================== */
+
+
+  _createClass(FlipClockCustom, [{
+    key: "bindEvents",
+    value: function bindEvents() {
+      this.CheckNameUnit();
+      this.NumberDecrease();
+      this.NumberIncrease();
+    }
+    /* ===================================
+     *  METHODS
+     * =================================== */
+
+  }, {
+    key: "NumberDecrease",
+    value: function NumberDecrease() {
+      // Declare variable flip clock
+      var chars = [];
+      var positions = [];
+      var numberDec = 55975444; // Create our number formatter.
+
+      var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      }); // format price into 1 000 000
+      // function formatter.format(number) => $1,000,00.00
+
+      var formatChar = formatter.format(numberDec).split('$').join('').split('.')[0].split(',').join(' '); // loop string and add each of char into array if char equal space <=> formatChar.charAt(i) === ' '
+
+      for (var i = 0; i < formatChar.length; i++) {
+        if (formatChar.charAt(i) === ' ') {
+          chars.push(i);
+        }
+      } // loop you just added to determine the correct position to margin
+
+
+      for (var i = 0; i < chars.length; i++) {
+        positions.push(chars[i] - i);
+      }
+      /*
+        * Example: formatChar = 1 000 000
+        * when you loop formatChar, chars = [1, 5]
+        * when you loop chars, positions = [1, 4]
+        * index of chars chars[0] = 1, chars[1] = 5 => chars[0] - 0 = 1 and chars[1] - 1 = 4
+        * add new value of array positions, => positions = [1, 4]
+        * */
+
+
+      var numberDecrease = $('.number-decrease').FlipClock(numberDec, {
+        clockFace: 'Counter'
+      });
+      setTimeout(function () {
+        setInterval(function () {
+          numberDecrease.decrement();
+        }, 60000);
+      }); // detect of pos to margin
+
+      $('.number-decrease .flip').each(function (i, value) {
+        positions.forEach(function (item) {
+          if (item === i + 1) {
+            $(value).css('margin-right', '13px');
+            $(value).addClass('add-dot');
+          }
+        });
+      });
+    }
+  }, {
+    key: "NumberIncrease",
+    value: function NumberIncrease() {
+      // Declare variable flip clock
+      var chars = [];
+      var positions = [];
+      var numberInc = 5597672; // Create our number formatter.
+
+      var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      }); // format price into 1 000 000
+      // function formatter.format(number) => $1,000,00.00
+
+      var formatChar = formatter.format(numberInc).split('$').join('').split('.')[0].split(',').join(' '); // loop string and add each of char into array if char equal space <=> formatChar.charAt(i) === ' '
+
+      for (var i = 0; i < formatChar.length; i++) {
+        if (formatChar.charAt(i) === ' ') {
+          chars.push(i);
+        }
+      } // loop you just added to determine the correct position to margin
+
+
+      for (var i = 0; i < chars.length; i++) {
+        positions.push(chars[i] - i);
+      }
+      /*
+      * Example: formatChar = 1 000 000
+      * when you loop formatChar, chars = [1, 5]
+      * when you loop chars, positions = [1, 4]
+      * index of chars chars[0] = 1, chars[1] = 5 => chars[0] - 0 = 1 and chars[1] - 1 = 4
+      * add new value of array positions, => positions = [1, 4]
+      * */
+
+
+      var numberIncrease = $('.number-increase').FlipClock(numberInc, {
+        clockFace: 'Counter'
+      });
+      setTimeout(function () {
+        setInterval(function () {
+          numberIncrease.increment();
+        }, 60000);
+      }); // detect of pos to margin
+
+      $('.number-increase .flip').each(function (i, value) {
+        positions.forEach(function (item) {
+          if (item === i + 1) {
+            $(value).css('margin-right', '13px');
+            $(value).addClass('add-dot');
+          }
+        });
+      });
+    }
+  }, {
+    key: "CheckNameUnit",
+    value: function CheckNameUnit() {
+      if (window.innerWidth <= 1024) {
+        $('.unit01').html('Tấn');
+        $('.unit02').html('Nghìn cây xanh');
+      }
+    }
+  }]);
+
+  return FlipClockCustom;
+}();
+
+exports.default = FlipClockCustom;
 
 /***/ })
 /******/ ]);
