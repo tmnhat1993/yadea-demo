@@ -13,8 +13,10 @@ export default class FlipClockCustom {
    * =================================== */
   bindEvents(){
     this.CheckNameUnit();
-    this.NumberDecrease();
-    this.NumberIncrease();
+    if($('#home-flip-clock').length > 0) {
+      this.NumberDecrease();
+      this.NumberIncrease();
+    }
   }
 
 
