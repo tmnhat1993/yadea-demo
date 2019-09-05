@@ -7,6 +7,10 @@ export default class SliderDetail {
    * =================================== */
   constructor(){
     // Elements Variable
+    this.arrSlideDetail = $('.slide-content .slide-item');
+    this.arrLiTag = $('.slide-dots-custom li');
+    this.arrDots = $('.slide-dots-custom li button');
+
     this.bindEvents();
   }
 
@@ -19,6 +23,8 @@ export default class SliderDetail {
     this.SlideDetailPage();
     // Slick carousel center mod image reality
     this.SlideImageReality();
+
+    this.AddColorSlide();
   }
 
 
@@ -30,15 +36,15 @@ export default class SliderDetail {
     $('.slide-detail .slide-content').slick({
       draggable: true,
       arrows: false,
-      dots: true,
+      dots: false,
       fade: true,
       speed: 900,
       infinite: true,
-      autoplay:true,
-      autoplaySpeed:4000,
+      // autoplay:true,
+      // autoplaySpeed:5000,
       cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
       touchThreshold: 100
-    })
+    });
   }
 
 
@@ -70,4 +76,17 @@ export default class SliderDetail {
       ]
     });
   }
+
+
+  AddColorSlide () {
+    for(let i=0 ; i< this.arrDots.length ; i++) {
+      $(this.arrDots[i]).on('click', function () {
+        $('.slide-detail .slide-content').slick('slickGoTo', i);
+        var arrLiTag = $('.slide-dots-custom li');
+        // $(this).parent().addClass('slick-active')
+      })
+    }
+  }
+
+
 }

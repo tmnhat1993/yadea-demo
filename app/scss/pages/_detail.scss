@@ -1,6 +1,73 @@
 //========== Section slide slick carousel ========
 .slide-detail {
   padding-bottom: 90px;
+  .slide-container {
+    position: relative;
+    //custom dots slick
+    .slide-dots-custom {
+      position: absolute;
+      margin: 0;
+      right: unset;
+      left: 50%;
+      align-items: center;
+      justify-content: center;
+      @include transform(translateX(calc(-50% - 220px)));
+      @include flex;
+
+      li {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 0 9px;
+        box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+        @include border-radius(50%);
+        @include transition(all 0.3s);
+        button {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          border: none;
+          background: transparent;
+          color: transparent;
+          outline: none;
+          text-indent: -9999px;
+          cursor: pointer;
+        }
+        &:before {
+          content: none;
+        }
+
+        &.white{ background-color: $white; }
+        &.gray{ background-color: #52555A }
+        &.light-gray{ background-color: #c7c7c7; }
+        &.red{ background-color: #e02e2a; }
+        &.yellow{ background-color: #fff307; }
+
+        &.green{ background-color: #009432; }
+        &.pink{ background-color: #ED4C67; }
+        &.blue{ background-color: #0652DD; }
+        &.purple{ background-color: #833471; }
+        &.orange{ background-color: $main-color; }
+        &.brown{ background-color: #e58e26; }
+
+        &.slick-active {
+          @include transform(scale(1.25));
+
+          &:after {
+            content: '';
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            background: rgba(245, 245, 245, 0.36);
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            @include transform(translate(-50%,-50%));
+          }
+        }
+      }
+    }
+  }
   .slide-item {
     @include flex-important;
     justify-content: center;
@@ -39,62 +106,6 @@
         @include border-radius(50px);
         &:hover {
           background: #fc6308;
-        }
-      }
-    }
-  }
-  //custom dots slick
-  .slick-dots {
-    margin: 0;
-    right: unset;
-    left: 50%;
-    align-items: center;
-    justify-content: center;
-    @include transform(translateX(calc(-50% - 220px)));
-    @include flex;
-
-    li {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      margin: 0 9px;
-      box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
-      @include border-radius(50%);
-      @include transition(all 0.3s);
-
-      &:before {
-        content: none;
-      }
-
-      &:nth-child(1) {
-        background: #adadad;
-      }
-
-      &:nth-child(2) {
-        background: #313234;
-      }
-
-      &:nth-child(3) {
-        background: #ffffff;
-      }
-
-      &:nth-child(4) {
-        background: #c42835;
-      }
-
-      &.slick-active {
-        @include transform(scale(1.25));
-
-        &:after {
-          content: '';
-          position: absolute;
-          width: 17px;
-          height: 17px;
-          background: #f5f5f55c;
-          border-radius: 50%;
-          left: 50%;
-          top: 50%;
-          @include transform(translate(-50%,-50%));
         }
       }
     }
@@ -148,35 +159,37 @@
         }
       }
     }
+    .slide-container {
+      //custom dots slick
+      .slide-dots-custom {
+        padding: 0;
+        margin: 0;
+        left: 50%;
+        @include transform(translateX(calc(-50% - 0px)));
 
-    //custom dots slick
-    .slick-dots {
-      margin: 0;
-      left: 50%;
-      @include transform(translateX(calc(-50% - 0px)));
+        li {
+          width: 25px;
+          height: 25px;
+          margin: 0 9px;
+          box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+          @include border-radius(50%);
+          @include transition(all 0.3s);
 
-      li {
-        width: 25px;
-        height: 25px;
-        margin: 0 9px;
-        box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
-        @include border-radius(50%);
-        @include transition(all 0.3s);
+          &:before {
+            content: none;
+          }
 
-        &:before {
-          content: none;
-        }
+          &.slick-active {
+            @include transform(scale(1.25));
 
-        &.slick-active {
-          @include transform(scale(1.25));
-
-          &:after {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            left: 50%;
-            top: 50%;
-            @include transform(translate(-50%,-50%));
+            &:after {
+              width: 14px;
+              height: 14px;
+              border-radius: 50%;
+              left: 50%;
+              top: 50%;
+              @include transform(translate(-50%,-50%));
+            }
           }
         }
       }
@@ -221,33 +234,35 @@
       }
     }
     //custom dots slick
-    .slick-dots {
-      margin: 0;
-      left: 50%;
-      @include transform(translateX(calc(-50% - 0px)));
+    .slide-container {
+      .slick-dots {
+        margin: 0;
+        left: 50%;
+        @include transform(translateX(calc(-50% - 0px)));
 
-      li {
-        width: 25px;
-        height: 25px;
-        margin: 0 9px;
-        box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
-        @include border-radius(50%);
-        @include transition(all 0.3s);
+        li {
+          width: 25px;
+          height: 25px;
+          margin: 0 9px;
+          box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+          @include border-radius(50%);
+          @include transition(all 0.3s);
 
-        &:before {
-          content: none;
-        }
+          &:before {
+            content: none;
+          }
 
-        &.slick-active {
-          @include transform(scale(1.25));
+          &.slick-active {
+            @include transform(scale(1.25));
 
-          &:after {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            left: 50%;
-            top: 50%;
-            @include transform(translate(-50%,-50%));
+            &:after {
+              width: 14px;
+              height: 14px;
+              border-radius: 50%;
+              left: 50%;
+              top: 50%;
+              @include transform(translate(-50%,-50%));
+            }
           }
         }
       }
