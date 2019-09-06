@@ -50,7 +50,7 @@
         &.orange{ background-color: $main-color; }
         &.brown{ background-color: #e58e26; }
 
-        &.slick-active {
+        &.active-color {
           @include transform(scale(1.25));
 
           &:after {
@@ -179,7 +179,7 @@
             content: none;
           }
 
-          &.slick-active {
+          &.active-color {
             @include transform(scale(1.25));
 
             &:after {

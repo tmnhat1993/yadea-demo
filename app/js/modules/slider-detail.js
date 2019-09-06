@@ -40,8 +40,8 @@ export default class SliderDetail {
       fade: true,
       speed: 900,
       infinite: true,
-      // autoplay:true,
-      // autoplaySpeed:5000,
+      autoplay:true,
+      autoplaySpeed:5000,
       cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
       touchThreshold: 100
     });
@@ -79,14 +79,20 @@ export default class SliderDetail {
 
 
   AddColorSlide () {
-    for(let i=0 ; i< this.arrDots.length ; i++) {
-      $(this.arrDots[i]).on('click', function () {
-        $('.slide-detail .slide-content').slick('slickGoTo', i);
-        var arrLiTag = $('.slide-dots-custom li');
-        // $(this).parent().addClass('slick-active')
+    var arrLiTag = $('.slide-dots-custom li');
+    $('.slide-detail .slide-content').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+      arrLiTag.each(function (i,e) {
+        if (nextSlide === i) {
+          $(this).addClass('active-color');
+        } else {
+          $(this).removeClass('active-color');
+        }
       })
-    }
+    });
+    this.arrDots.each(function (i , e) {
+      $(this).on('click', _.debounce(function () {
+        $('.slide-detail .slide-content').slick('slickGoTo', i);
+      }))
+    })
   }
-
-
 }
