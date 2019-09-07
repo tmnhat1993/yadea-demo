@@ -19513,6 +19513,9 @@ function () {
     _classCallCheck(this, SliderDetail);
 
     // Elements Variable
+    this.arrSlideDetail = $('.slide-content .slide-item');
+    this.arrLiTag = $('.slide-dots-custom li');
+    this.arrDots = $('.slide-dots-custom li button');
     this.bindEvents();
   }
   /* ===================================
@@ -19527,6 +19530,7 @@ function () {
       this.SlideDetailPage(); // Slick carousel center mod image reality
 
       this.SlideImageReality();
+      this.AddColorSlide();
     }
     /* ===================================
      *  METHODS
@@ -19538,12 +19542,12 @@ function () {
       $('.slide-detail .slide-content').slick({
         draggable: true,
         arrows: false,
-        dots: true,
+        dots: false,
         fade: true,
         speed: 900,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 5000,
         cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
         touchThreshold: 100
       });
@@ -19573,6 +19577,25 @@ function () {
             slidesToShow: 1
           }
         }]
+      });
+    }
+  }, {
+    key: "AddColorSlide",
+    value: function AddColorSlide() {
+      var arrLiTag = $('.slide-dots-custom li');
+      $('.slide-detail .slide-content').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        arrLiTag.each(function (i, e) {
+          if (nextSlide === i) {
+            $(this).addClass('active-color');
+          } else {
+            $(this).removeClass('active-color');
+          }
+        });
+      });
+      this.arrDots.each(function (i, e) {
+        $(this).on('click', _.debounce(function () {
+          $('.slide-detail .slide-content').slick('slickGoTo', i);
+        }));
       });
     }
   }]);
@@ -19621,8 +19644,11 @@ function () {
     key: "bindEvents",
     value: function bindEvents() {
       this.CheckNameUnit();
-      this.NumberDecrease();
-      this.NumberIncrease();
+
+      if ($('#home-flip-clock').length > 0) {
+        this.NumberDecrease();
+        this.NumberIncrease();
+      }
     }
     /* ===================================
      *  METHODS

@@ -5469,6 +5469,8 @@ body.fixed-header {
             line-height: 52px; }
             #home-flip-clock .item .flip-item .flip-clock-wrapper ul li a div {
               font-size: 44px; }
+            #home-flip-clock .item .flip-item .flip-clock-wrapper ul li a .up {
+              border-bottom: 1px solid #ffffff; }
             #home-flip-clock .item .flip-item .flip-clock-wrapper ul li a .down {
               border-bottom-left-radius: 3px;
               border-bottom-right-radius: 3px; }
@@ -7151,6 +7153,99 @@ body.fixed-header {
 
 .slide-detail {
   padding-bottom: 90px; }
+  .slide-detail .slide-container {
+    position: relative; }
+    .slide-detail .slide-container .slide-dots-custom {
+      position: absolute;
+      margin: 0;
+      right: unset;
+      left: 50%;
+      align-items: center;
+      justify-content: center;
+      -webkit-transform: translateX(calc(-50% - 220px));
+      -khtml-transform: translateX(calc(-50% - 220px));
+      -moz-transform: translateX(calc(-50% - 220px));
+      -ms-transform: translateX(calc(-50% - 220px));
+      -o-transform: translateX(calc(-50% - 220px));
+      transform: translateX(calc(-50% - 220px));
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; }
+      .slide-detail .slide-container .slide-dots-custom li {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 0 9px;
+        box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+        -webkit-border-radius: 50%;
+        -khtml-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-transition: all 0.3s;
+        -khtml-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+        .slide-detail .slide-container .slide-dots-custom li button {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          border: none;
+          background: transparent;
+          color: transparent;
+          outline: none;
+          text-indent: -9999px;
+          cursor: pointer; }
+        .slide-detail .slide-container .slide-dots-custom li:before {
+          content: none; }
+        .slide-detail .slide-container .slide-dots-custom li.white {
+          background-color: #FFF; }
+        .slide-detail .slide-container .slide-dots-custom li.gray {
+          background-color: #52555A; }
+        .slide-detail .slide-container .slide-dots-custom li.light-gray {
+          background-color: #c7c7c7; }
+        .slide-detail .slide-container .slide-dots-custom li.red {
+          background-color: #e02e2a; }
+        .slide-detail .slide-container .slide-dots-custom li.yellow {
+          background-color: #fff307; }
+        .slide-detail .slide-container .slide-dots-custom li.green {
+          background-color: #009432; }
+        .slide-detail .slide-container .slide-dots-custom li.pink {
+          background-color: #ED4C67; }
+        .slide-detail .slide-container .slide-dots-custom li.blue {
+          background-color: #0652DD; }
+        .slide-detail .slide-container .slide-dots-custom li.purple {
+          background-color: #833471; }
+        .slide-detail .slide-container .slide-dots-custom li.orange {
+          background-color: #f36d21; }
+        .slide-detail .slide-container .slide-dots-custom li.brown {
+          background-color: #e58e26; }
+        .slide-detail .slide-container .slide-dots-custom li.active-color {
+          -webkit-transform: scale(1.25);
+          -khtml-transform: scale(1.25);
+          -moz-transform: scale(1.25);
+          -ms-transform: scale(1.25);
+          -o-transform: scale(1.25);
+          transform: scale(1.25); }
+          .slide-detail .slide-container .slide-dots-custom li.active-color:after {
+            content: '';
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            background: rgba(245, 245, 245, 0.36);
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -khtml-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
   .slide-detail .slide-item {
     display: -moz-box !important;
     display: -ms-flexbox !important;
@@ -7195,72 +7290,6 @@ body.fixed-header {
         border-radius: 50px; }
         .slide-detail .slide-item-caption a:hover {
           background: #fc6308; }
-  .slide-detail .slick-dots {
-    margin: 0;
-    right: unset;
-    left: 50%;
-    align-items: center;
-    justify-content: center;
-    -webkit-transform: translateX(calc(-50% - 220px));
-    -khtml-transform: translateX(calc(-50% - 220px));
-    -moz-transform: translateX(calc(-50% - 220px));
-    -ms-transform: translateX(calc(-50% - 220px));
-    -o-transform: translateX(calc(-50% - 220px));
-    transform: translateX(calc(-50% - 220px));
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex; }
-    .slide-detail .slick-dots li {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      margin: 0 9px;
-      box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
-      -webkit-border-radius: 50%;
-      -khtml-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-      border-radius: 50%;
-      -webkit-transition: all 0.3s;
-      -khtml-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -ms-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s; }
-      .slide-detail .slick-dots li:before {
-        content: none; }
-      .slide-detail .slick-dots li:nth-child(1) {
-        background: #adadad; }
-      .slide-detail .slick-dots li:nth-child(2) {
-        background: #313234; }
-      .slide-detail .slick-dots li:nth-child(3) {
-        background: #ffffff; }
-      .slide-detail .slick-dots li:nth-child(4) {
-        background: #c42835; }
-      .slide-detail .slick-dots li.slick-active {
-        -webkit-transform: scale(1.25);
-        -khtml-transform: scale(1.25);
-        -moz-transform: scale(1.25);
-        -ms-transform: scale(1.25);
-        -o-transform: scale(1.25);
-        transform: scale(1.25); }
-        .slide-detail .slick-dots li.slick-active:after {
-          content: '';
-          position: absolute;
-          width: 17px;
-          height: 17px;
-          background: #f5f5f55c;
-          border-radius: 50%;
-          left: 50%;
-          top: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -khtml-transform: translate(-50%, -50%);
-          -moz-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
   .slide-detail .slick-active .slide-item-image {
     -webkit-animation: animate-slide-02 1.5s forwards;
     -khtml-animation: animate-slide-02 1.5s forwards;
@@ -7298,7 +7327,8 @@ body.fixed-header {
         .slide-detail .slide-item-caption a {
           font-size: 14px;
           padding: 10px 40px; }
-    .slide-detail .slick-dots {
+    .slide-detail .slide-container .slide-dots-custom {
+      padding: 0;
       margin: 0;
       left: 50%;
       -webkit-transform: translateX(calc(-50% - 0px));
@@ -7307,7 +7337,7 @@ body.fixed-header {
       -ms-transform: translateX(calc(-50% - 0px));
       -o-transform: translateX(calc(-50% - 0px));
       transform: translateX(calc(-50% - 0px)); }
-      .slide-detail .slick-dots li {
+      .slide-detail .slide-container .slide-dots-custom li {
         width: 25px;
         height: 25px;
         margin: 0 9px;
@@ -7324,16 +7354,16 @@ body.fixed-header {
         -ms-transition: all 0.3s;
         -o-transition: all 0.3s;
         transition: all 0.3s; }
-        .slide-detail .slick-dots li:before {
+        .slide-detail .slide-container .slide-dots-custom li:before {
           content: none; }
-        .slide-detail .slick-dots li.slick-active {
+        .slide-detail .slide-container .slide-dots-custom li.active-color {
           -webkit-transform: scale(1.25);
           -khtml-transform: scale(1.25);
           -moz-transform: scale(1.25);
           -ms-transform: scale(1.25);
           -o-transform: scale(1.25);
           transform: scale(1.25); }
-          .slide-detail .slick-dots li.slick-active:after {
+          .slide-detail .slide-container .slide-dots-custom li.active-color:after {
             width: 14px;
             height: 14px;
             border-radius: 50%;
@@ -7369,7 +7399,7 @@ body.fixed-header {
         .slide-detail .slide-item-caption a {
           font-size: 14px;
           padding: 10px 40px; }
-    .slide-detail .slick-dots {
+    .slide-detail .slide-container .slick-dots {
       margin: 0;
       left: 50%;
       -webkit-transform: translateX(calc(-50% - 0px));
@@ -7378,7 +7408,7 @@ body.fixed-header {
       -ms-transform: translateX(calc(-50% - 0px));
       -o-transform: translateX(calc(-50% - 0px));
       transform: translateX(calc(-50% - 0px)); }
-      .slide-detail .slick-dots li {
+      .slide-detail .slide-container .slick-dots li {
         width: 25px;
         height: 25px;
         margin: 0 9px;
@@ -7395,16 +7425,16 @@ body.fixed-header {
         -ms-transition: all 0.3s;
         -o-transition: all 0.3s;
         transition: all 0.3s; }
-        .slide-detail .slick-dots li:before {
+        .slide-detail .slide-container .slick-dots li:before {
           content: none; }
-        .slide-detail .slick-dots li.slick-active {
+        .slide-detail .slide-container .slick-dots li.slick-active {
           -webkit-transform: scale(1.25);
           -khtml-transform: scale(1.25);
           -moz-transform: scale(1.25);
           -ms-transform: scale(1.25);
           -o-transform: scale(1.25);
           transform: scale(1.25); }
-          .slide-detail .slick-dots li.slick-active:after {
+          .slide-detail .slide-container .slick-dots li.slick-active:after {
             width: 14px;
             height: 14px;
             border-radius: 50%;
