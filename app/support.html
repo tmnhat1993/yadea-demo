@@ -18,8 +18,12 @@
     <!-- Main stylesheet Reference -->
 
 </head>
-<body class="fixed-header">
+<body class="fixed-header with-overlay">
 
+<!-- ====== LOADING OVERLAY ===== -->
+<div id="loading-overlay">
+    <img src="img/logo.png" class="loading-image">
+</div>
 
 <!-- ====== MAIN CONTENT ====== -->
 
@@ -47,10 +51,10 @@
                             <a class="nav-link" href="products.html">Sản phẩm</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Cửa hàng</a>
+                            <a class="nav-link" href="shop-listing.html">Cửa hàng</a>
                         </li>
                         <li class="nav-item" id="about-us-sub-menu-trigger">
-                            <a class="nav-link" href="#">Về chúng tôi</a>
+                            <a class="nav-link" href="about.html">Về chúng tôi</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="support.html">Hỗ trợ</a>
@@ -175,14 +179,14 @@
     
             </div>
         </div>
-    
+
         <!-- Fixed Position Sub Menu -->
         <div class="container sub-menu" id="about-us-sub-menu">
             <!-- Row - About Wrapper -->
             <div class="sub-menu__wrapper row">
                 <!-- About Item -->
-                <div class="col-md-3 col-6 sub-menu__wrapper__item">
-    
+                <div class="col-md-4 col-6 sub-menu__wrapper__item">
+
                     <!-- About Detail Wrapper -->
                     <div class="sub-menu__wrapper__item__detail">
                         <a href="about.html">
@@ -190,43 +194,42 @@
                                 <img class="img-fluid" src="img/about-thumbnail.jpg">
                             </div>
                             <p class="sub-title">Giới thiệu Yadea</p>
-                            <p class="txt-gray desc">Giới thiệu Công ty TNHH Công nghệ YADEA</p>
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            <p class="txt-gray desc">Công ty TNHH Xe Máy Điện Thông Minh YADEA</p>
+                            <div class="line"></div>
                         </a>
                     </div>
                 </div><!-- About Item -->
-    
+
                 <!-- About Item -->
-                <div class="col-md-3 col-6 sub-menu__wrapper__item">
-    
-                        <!-- About Detail Wrapper -->
-                        <div class="sub-menu__wrapper__item__detail">
-                            <a href="course.html">
-                                <div class="about-us__thumbnail">
-                                    <img class="img-fluid" src="img/history-thumbnail.jpg">
-                                </div>
-                                <p class="sub-title">Quá trình phát triển</p>
-                                <p class="txt-gray desc">Lịch sử hình thành - quá trình phát triển của YADEA</p>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div><!-- About Item -->
-    
-                    <!-- About Item -->
-                <div class="col-md-3 col-6 sub-menu__wrapper__item">
-    
-                        <!-- About Detail Wrapper -->
-                        <div class="sub-menu__wrapper__item__detail">
-                            <a href="supplier.html">
-                                <div class="about-us__thumbnail">
-                                    <img class="img-fluid" src="img/supplier-thumbnail.jpg">
-                                </div>
-                                <p class="sub-title">Đối tác hàng đầu</p>
-                                <p class="txt-gray desc">Đối tác hàng đầu của chúng tôi</p>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div><!-- About Item -->
+                <div class="col-md-4 col-6 sub-menu__wrapper__item">
+                    <!-- About Detail Wrapper -->
+                    <div class="sub-menu__wrapper__item__detail">
+                        <a href="course.html">
+                            <div class="about-us__thumbnail">
+                                <img class="img-fluid" src="img/history-thumbnail.jpg">
+                            </div>
+                            <p class="sub-title">Quá trình phát triển</p>
+                            <p class="txt-gray desc">Lịch sử hình thành - quá trình phát triển của YADEA</p>
+                            <div class="line"></div>
+                        </a>
+                    </div>
+                </div><!-- About Item -->
+
+                <!-- About Item -->
+                <div class="col-md-4 col-6 sub-menu__wrapper__item">
+
+                    <!-- About Detail Wrapper -->
+                    <div class="sub-menu__wrapper__item__detail">
+                        <a href="supplier.html">
+                            <div class="about-us__thumbnail">
+                                <img class="img-fluid" src="img/supplier-thumbnail.jpg">
+                            </div>
+                            <p class="sub-title">Đối tác hàng đầu</p>
+                            <p class="txt-gray desc">Đối tác hàng đầu của chúng tôi</p>
+                            <div class="line"></div>
+                        </a>
+                    </div>
+                </div><!-- About Item -->
             </div>
         </div>
     
@@ -410,7 +413,7 @@
             <!-- Support Item -->
             <div class="support-type__item col-lg-3 col-6">
                 <div class="support-type__item__image">
-                    <img src="img/icons/shield-main.png">
+                    <img src="img/icons/Bao-hanh_icon.png">
                 </div>
                 <div class="support-type__item__detail">
                     <p class="page-desc">Thông tin bảo hành</p>
@@ -421,7 +424,7 @@
             <!-- Support Item -->
             <div class="support-type__item col-lg-3 col-6">
                 <div class="support-type__item__image">
-                    <img src="img/icons/pin-main.png">
+                    <img src="img/icons/Dai-ly_icon.png">
                 </div>
                 <div class="support-type__item__detail">
                     <p class="page-desc">Hệ thống cửa hàng</p>
@@ -432,7 +435,7 @@
             <!-- Support Item -->
             <div class="support-type__item col-lg-3 col-6">
                 <div class="support-type__item__image">
-                    <img src="img/icons/envelop-main.png">
+                    <img src="img/icons/Tai-lieu_icon.png">
                 </div>
                 <div class="support-type__item__detail">
                     <p class="page-desc">Tài liệu hướng <br> dẫn sử dụng</p>
@@ -443,7 +446,7 @@
             <!-- Support Item -->
             <div class="support-type__item col-lg-3 col-6" id="trigger-as-shop">
                 <div class="support-type__item__image">
-                    <img src="img/icons/shield-main.png">
+                    <img src="img/icons/Dang-ky.png">
                 </div>
                 <div class="support-type__item__detail">
                     <p class="page-desc">Đăng ký làm đại lý</p>

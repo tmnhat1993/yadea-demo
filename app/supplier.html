@@ -18,8 +18,12 @@
     <!-- Main stylesheet Reference -->
 
 </head>
-<body class="fixed-header">
+<body class="fixed-header with-overlay">
 
+<!-- ====== LOADING OVERLAY ===== -->
+<div id="loading-overlay">
+    <img src="img/logo.png" class="loading-image">
+</div>
 
 <!-- ====== MAIN CONTENT ====== -->
 
@@ -47,10 +51,10 @@
                             <a class="nav-link" href="products.html">Sản phẩm</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Cửa hàng</a>
+                            <a class="nav-link" href="shop-listing.html">Cửa hàng</a>
                         </li>
                         <li class="nav-item active" id="about-us-sub-menu-trigger">
-                            <a class="nav-link" href="#">Về chúng tôi</a>
+                            <a class="nav-link" href="about.html">Về chúng tôi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="support.html">Hỗ trợ</a>
@@ -175,14 +179,14 @@
     
             </div>
         </div>
-    
+
         <!-- Fixed Position Sub Menu -->
         <div class="container sub-menu" id="about-us-sub-menu">
             <!-- Row - About Wrapper -->
             <div class="sub-menu__wrapper row">
                 <!-- About Item -->
-                <div class="col-md-3 col-6 sub-menu__wrapper__item">
-    
+                <div class="col-md-4 col-6 sub-menu__wrapper__item">
+
                     <!-- About Detail Wrapper -->
                     <div class="sub-menu__wrapper__item__detail">
                         <a href="about.html">
@@ -190,43 +194,42 @@
                                 <img class="img-fluid" src="img/about-thumbnail.jpg">
                             </div>
                             <p class="sub-title">Giới thiệu Yadea</p>
-                            <p class="txt-gray desc">Giới thiệu Công ty TNHH Công nghệ YADEA</p>
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            <p class="txt-gray desc">Công ty TNHH Xe Máy Điện Thông Minh YADEA</p>
+                            <div class="line"></div>
                         </a>
                     </div>
                 </div><!-- About Item -->
-    
+
                 <!-- About Item -->
-                <div class="col-md-3 col-6 sub-menu__wrapper__item">
-    
-                        <!-- About Detail Wrapper -->
-                        <div class="sub-menu__wrapper__item__detail">
-                            <a href="course.html">
-                                <div class="about-us__thumbnail">
-                                    <img class="img-fluid" src="img/history-thumbnail.jpg">
-                                </div>
-                                <p class="sub-title">Quá trình phát triển</p>
-                                <p class="txt-gray desc">Lịch sử hình thành - quá trình phát triển của YADEA</p>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div><!-- About Item -->
-    
-                    <!-- About Item -->
-                <div class="col-md-3 col-6 sub-menu__wrapper__item">
-    
-                        <!-- About Detail Wrapper -->
-                        <div class="sub-menu__wrapper__item__detail">
-                            <a href="supplier.html">
-                                <div class="about-us__thumbnail">
-                                    <img class="img-fluid" src="img/supplier-thumbnail.jpg">
-                                </div>
-                                <p class="sub-title">Đối tác hàng đầu</p>
-                                <p class="txt-gray desc">Đối tác hàng đầu của chúng tôi</p>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div><!-- About Item -->
+                <div class="col-md-4 col-6 sub-menu__wrapper__item">
+                    <!-- About Detail Wrapper -->
+                    <div class="sub-menu__wrapper__item__detail">
+                        <a href="course.html">
+                            <div class="about-us__thumbnail">
+                                <img class="img-fluid" src="img/history-thumbnail.jpg">
+                            </div>
+                            <p class="sub-title">Quá trình phát triển</p>
+                            <p class="txt-gray desc">Lịch sử hình thành - quá trình phát triển của YADEA</p>
+                            <div class="line"></div>
+                        </a>
+                    </div>
+                </div><!-- About Item -->
+
+                <!-- About Item -->
+                <div class="col-md-4 col-6 sub-menu__wrapper__item">
+
+                    <!-- About Detail Wrapper -->
+                    <div class="sub-menu__wrapper__item__detail">
+                        <a href="supplier.html">
+                            <div class="about-us__thumbnail">
+                                <img class="img-fluid" src="img/supplier-thumbnail.jpg">
+                            </div>
+                            <p class="sub-title">Đối tác hàng đầu</p>
+                            <p class="txt-gray desc">Đối tác hàng đầu của chúng tôi</p>
+                            <div class="line"></div>
+                        </a>
+                    </div>
+                </div><!-- About Item -->
             </div>
         </div>
     
@@ -385,107 +388,37 @@
 <!-- === MAIN CONTENT === -->
 
 <div class="yadea-child-page supplier-page">
-    <section class="banner">
+    <section class="banner" style="background-image: url('img/about/partner/Yadea Partner Cover.jpg');">
         <div class="text">
-            <h2>NHÀ CUNG CẤP NỔI TIẾNG THẾ GIỚI</h2>
-            <p>Đối tác hàng đầu thế giới</p>
+            <h2>ĐỐI TÁC<br> HÀNG ĐẦU THẾ GIỚI</h2>
         </div>
     </section>
     <section class="content">
         <div class="intro">Sự hợp tác bền vững của YADEA và các thương hiệu cao cấp trên thế giới sẽ góp phần nâng cao chất lượng trong từng sản phẩm.</div>
         <div class="ui-flex align-center">
             <div class="item">
-                <div class="img-box"><img src="img/supplier/1.jpg"></div>
+                <div class="img-box"><img src="img/about/partner/LG-logo.png"></div>
             </div>
             <div class="item">
-                <div class="img-box"><img src="img/supplier/2.jpg"></div>
+                <div class="img-box"><img src="img/about/partner/Panasonic-Logo.png"></div>
             </div>
             <div class="item">
-                <div class="img-box"><img src="img/supplier/3.jpg"></div>
+                <div class="img-box"><img src="img/about/partner/Toyota-Logo.png"></div>
             </div>
             <div class="item">
-                <div class="img-box"><img src="img/supplier/4.jpg"></div>
+                <div class="img-box"><img src="img/about/partner/Bosch-Logo.png"></div>
             </div>
             <div class="item">
-                <div class="img-box"><img src="img/supplier/5.jpg"></div>
+                <div class="img-box"><img src="img/about/partner/Linghtning-Logo.png"></div>
             </div>
             <div class="item">
-                <div class="img-box"><img src="img/supplier/6.jpg"></div>
+                <div class="img-box"><img src="img/about/partner/Beckers-Logo.png"></div>
             </div>
             <div class="item">
-                <div class="img-box"><img src="img/supplier/7.jpg"></div>
+                <div class="img-box"><img src="img/about/partner/Kiska-Logo.png"></div>
             </div>
             <div class="item">
-                <div class="img-box"><img src="img/supplier/8.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/9.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/10.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/11.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/12.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/13.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/14.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/15.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/16.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/17.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/18.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/19.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/20.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/21.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/22.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/23.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/24.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/25.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/26.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/27.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/28.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/29.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/30.jpg"></div>
-            </div>
-            <div class="item">
-                <div class="img-box"><img src="img/supplier/31.jpg"></div>
+                <div class="img-box"><img src="img/about/partner/Convestro-Logo.png"></div>
             </div>
         </div>
     </section>
